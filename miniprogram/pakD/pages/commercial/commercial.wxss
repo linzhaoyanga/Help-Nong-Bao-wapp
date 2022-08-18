@@ -1,0 +1,161 @@
+
+.tab {
+    width: auto;
+    height: auto;
+    margin: auto 20rpx;
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+    background-color: white;
+}
+
+.hint {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    text-align: center;
+    color: rgb(153, 156, 156);
+    border-bottom: 1rpx solid rgb(235, 235, 235);
+}
+.box{
+    width: auto;
+    margin: auto 30rpx;
+}
+
+.message {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+    padding: 10rpx;
+}
+.message .left{
+    flex: 8;
+    height: 160rpx;
+}
+.message .right{
+    flex: 2;
+}
+
+.phone {
+    margin-top: 37rpx;
+    font-size: 30rpx;
+    margin-bottom: 10rpx;
+}
+.detail {
+    display: inline-block;
+    font-size: 30rpx;
+}
+
+.picture {
+    position: absolute;
+    width: 70rpx;
+    height: 70rpx;
+    margin: 55rpx 0rpx 0rpx 24rpx;
+}
+
+.detaila{
+    display: inline-block;
+    font-size: 30rpx;
+    width: 690rpx;
+}
+
+.getLocation {
+    height: 160rpx;
+    line-height: 160rpx;
+    text-align: center;
+    color: rgb(45, 158, 211);
+}
+
+.odd {
+    width: 100%;
+    height: 160rpx;
+    display: flex;
+    padding: 10rpx;
+    justify-content: space-between;
+}
+
+.odd .left{
+    flex: 8;
+}
+
+.odd .right{
+    flex: 2;
+    text-align: center;
+}
+
+.exp {
+    display: inline-block;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.ex {
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 10rpx;
+    background-color: #f7f7f7;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+}
+.p-style{
+    color: #acb6bf;
+}
+
+.p {
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 40rpx;
+}
+
+.pany {
+    width: 100%;
+    padding: 10rpx;
+}
+.bot{
+    display: flex;
+}
+.text{
+    display: inline-block;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 10rpx;
+}
+.picker {
+    display: inline-block;
+    margin-left: 10rpx;
+    background-color: #f7f7f7;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    width: 500rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 10rpx;
+}
+
+.submit {
+    margin: auto;
+    margin-top: 50rpx;
+    width: 360rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: white;
+    border-radius: 10rpx;
+    background-color: #53b175;
+    font-size: 28rpx;
+    margin-bottom: 30rpx;
+}
+
+.not {
+    margin: auto;
+    margin-top: 20rpx;
+    width: 360rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #000;
+    border-radius: 10rpx;
+    background-color: white;
+    font-size: 28rpx;
+}

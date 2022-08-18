@@ -1,0 +1,261 @@
+.containr {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    font-size: 30rpx;
+    z-index: 999;
+}
+
+.containername {
+    width: 180rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 28rpx;
+    opacity: 0.8;
+}
+
+.active {
+    opacity: 1;
+    border-bottom: 4rpx solid #000;
+}
+.kkkkk{
+    margin-top: 90rpx;
+}
+
+.dingdan {
+    width: 100%;
+    font-size: 28rpx;
+    color: #333;
+    margin: 15rpx 0;
+    background-color: #fff;
+}
+
+.hz {
+    width: 700rpx;
+    padding: 22rpx;
+    border-bottom: 1rpx solid #D4D4D4;
+
+}
+
+.dd {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1rpx solid #D4D4D4;
+
+}
+
+.xq {
+    margin: 15rpx 0;
+}
+
+.xq image {
+    display: inline-block;
+    width: 144rpx;
+    height: 144rpx;
+    vertical-align: top;
+    margin-right: 20rpx;
+}
+
+.xq .bt {
+    width: 360rpx;
+    height: 100rpx;
+    display: inline-block;
+}
+
+.jg {
+    width: 100%;
+    font-size: 32rpx;
+    text-align: right;
+}
+
+.hj {
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 700rpx;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.hj text {
+    margin-left: 15rpx;
+}
+
+.fh {
+    width: 700rpx;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.fht {
+    display: inline-block;
+    width: 150rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin: 30rpx;
+    color: darkgoldenrod;
+    text-align: center;
+    border: 1rpx solid darkgoldenrod;
+}
+
+.list {
+    width: auto;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin: auto 10rpx;
+    margin-top: 10rpx;
+    padding: 20rpx;
+    border-radius: 20rpx;
+    margin-bottom: 10rpx;
+}
+
+.list .top {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
+}
+
+.list .top >text{
+    color: #ccc;
+}
+
+.list .middle {
+    display: flex;
+    margin-top: 10rpx;
+    border-bottom: 1rpx solid rgb(243, 243, 243);
+}
+
+.list .middle .left image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 4rpx;
+}
+
+.list .middle .right {
+    width: 300rpx;
+    margin-left: 20rpx;
+}
+
+.list .middle .right .title {
+    width: 490rpx;
+    margin-bottom: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list .middle .right .num {
+    margin-top: 45rpx;
+    color: #c85945;
+}
+
+.list .middle .btnk {
+    width: 200rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-top: 60rpx;
+    background-color: #53b175;
+    color: white;
+    font-size: 28rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+
+.list .bot {
+    display: flex;
+    justify-content: space-between;
+    height: 80rpx;
+}
+
+.list .bot .time {
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    color: #ccc;
+}
+
+.list .bot .go {
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+    text-align: center;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    float: right;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    color: white;
+    background-color: #c85945;
+}
+
+.list .total {
+    margin-top: 10rpx;
+}
+
+.list .total .header {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 32rpx;
+    color: #000;
+    border-left: 10rpx solid #53b175;
+    padding-left: 10rpx;
+}
+
+.list .total>.t {
+    font-size: 28rpx;
+    margin: 10rpx auto;
+    margin-left: 15rpx;
+}
+
+.list .total>.t .total-num {
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.list .total>.t .total-price {
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.list .total>.b {
+    font-size: 28rpx;
+    margin: 10rpx auto;
+    margin-left: 15rpx;
+}
+
+.list .total>.b .address {
+    margin-bottom: 10rpx;
+    color: #000;
+    font-weight: bold;
+}
+
+.useroder {
+    font-size: 30rpx;
+    margin-left: 5px;
+    color: rgb(207, 42, 42);
+}
+
+.bot-loading{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}
+
+.bot-toast{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 400rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}

@@ -1,0 +1,118 @@
+/* pages/address/address.wxss */
+page{
+    background-color: white;
+}
+
+.container{
+    height: 90vh;
+    width: 90vw;
+    margin: auto;
+}
+
+.box {
+    margin-top: 10rpx;
+    padding-top: 20rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid rgb(238, 236, 236);    
+}
+
+.box  .default view{
+    width: 120rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 4rpx;
+    color: white;
+    text-align: center;
+    font-size: 22rpx;
+    background-color: #53b175;
+}
+
+.box .bot{
+    display: flex;
+    margin-top: 10rpx;
+}
+
+.box .bot .left{
+    flex: 8;
+    font-size: 28rpx;
+}
+
+.box .bot .left .address{
+    color: #000;
+    font-weight: bold;
+}
+
+.box .bot .left .name{
+    margin-top: 10rpx;
+}
+
+.box .bot .right{
+    flex: 2;
+    text-align: right;
+}
+
+.box .bot .right image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.addaddress-name{
+    position: fixed;
+    bottom: 20rpx;
+    left: 10%;
+    text-align: center;
+    width: 80%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #53b175;
+    border-radius: 50rpx;
+    color: white;
+}
+
+.addaddress-name:hover{
+    opacity: 0.8;
+}
+
+.ress{
+    width: 90%;
+    line-height: 80rpx;
+    margin: auto;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    padding: 5rpx;
+    background-color: white;
+    border-left: 4rpx solid #40c77b;
+}
+
+.ress-name{
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    padding-left: 10rpx;
+    width: 100%;
+    height: 60rpx;
+}
+.ress-address{
+    height: auto;
+    line-height: 50rpx;
+    padding-left: 10rpx;
+    margin-top: 20rpx;
+}
+.delete{
+    position: absolute;
+    right: 50rpx;
+
+}
+.delete image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.empty-address{
+    text-align: center;
+    margin-top: 200rpx;
+    color: #ccc;
+    font-size: 28rpx;
+}
+
+.empty-address image{
+    width: 200rpx;
+    height: 200rpx;
+}

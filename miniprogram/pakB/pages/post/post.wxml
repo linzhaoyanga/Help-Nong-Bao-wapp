@@ -1,0 +1,74 @@
+<wxs src="../../../utils/filter/format.wxs" module="tool" />
+<view class="container" wx:if="{{!isPageLoading}}">
+    <!-- 内容区 -->
+    <div class="content">
+        <!-- 作者信息 -->
+        <view class="writer-info">
+            <view class="left">
+                <image src="{{postInfo.userimg}}" bindtap="skipPage" data-id="{{postInfo.userId}}"></image>
+                <view class="middle">
+                    <view class="name">{{postInfo.username}}</view>
+                    <view class="time">{{tool.dateFormat(postInfo.time)}}</view>
+                </view>
+            </view>
+            <view class="right">
+                <view class="support" wx:if="{{flog == 0}}">
+                    <image mode="aspectFit" src="../../images/{{!isSupport?'collect.png':'collect-active.png'}}" bindtap="supportArtice"></image>
+                </view>
+                <button open-type="share" hover-class="none" class="share">
+                    <image src="../../images/share.png"></image>
+                    <view>分享</view>
+                </button>
+            </view>
+        </view>
+        <!-- 文章内容 -->
+        <view class="word-info">
+            <view class="text">
+                {{postInfo.context}}
+            </view>
+            <view class="imgs">
+                <image wx:for="{{postInfo.imgs}}" wx:key="index" src="{{item}}" mode="widthFix" bindtap="priviewImg" data-src="{{item}}"></image>
+            </view>
+        </view>
+    </div>
+    <!-- 评论区 -->
+    <view class="comment">
+        <block wx:if="{{total> 0}}">
+            <!-- 头部显示共几条评论 -->
+            <view class="header">评论 · {{total}}</view>
+            <view class="content">
+                <!-- 评论列表 -->
+                <ul class="comments">
+                    <li wx:for="{{comments}}" wx:key="index">
+                        <view class="top">
+                            <image src="{{item.userimg}}" bindtap="skipPage" data-id="{{item.userId}}"></image>
+                            <view class="name">{{item.username}}</view>
+                        </view>
+                        <view class="middle">
+                            <view class="text">{{item.context}}</view>
+                        </view>
+                        <view class="bot">
+                            <view class="time">{{tool.dateFormat(item.createTime)}}</view>
+                            <view class="heart" bindtap="supportComment" data-id="{{item._id}}">
+                                <image src="../../images/{{!item.isSupport?'support.png' : 'support-active.png'}}"></image>
+                                <text class="num">{{item.supportVolume}}</text>
+                            </view>
+                        </view>
+                    </li>
+                </ul>
+                <view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+            </view>
+        </block>
+        <view class="bot-toast" wx:if="{{isToast}}">— 无更多评论 —</view>
+        <view wx:if="{{total<= 0}}" class="comment-empty">
+            <image src="../../images/comment-empty.png" class="empty-image"></image>
+            <view>评论为空，快来评论吧！</view>
+        </view>
+    </view>
+    <!-- 发言 -->
+    <view class="speak" wx:if="{{flog == 0 && typess == 1}}">
+        <input class="input" type="text" name="commentContext" placeholder="说点什么吧......" model:value="{{commentContext}}" />
+        <view class="send" bindtap="sendMessage">发表</view>
+    </view>
+</view>
+<view class="bot-loading" wx:if="{{isPageLoading}}">加载中...</view>

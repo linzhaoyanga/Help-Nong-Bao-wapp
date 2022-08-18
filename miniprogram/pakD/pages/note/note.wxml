@@ -1,0 +1,23 @@
+<wxs src="../../../utils/filter/format.wxs" module="tool" />
+<view class="article-view" wx:for="{{articeList}}" wx:key="index">
+    <view class="top">
+        <view class="user">
+            <image class="pic" src="{{item.userimg}}"></image>
+            <view class="name">{{item.username}}</view>
+            <view class="delete" bindtap="deletePost" data-id="{{item._id}}" data-index="{{index}}">删除</view>
+        </view>
+        <view class="time">{{tool.dateFormat(item.time)}}</view>
+    </view>
+    <view class="middle" bindtap="goPost" data-id="{{item._id}}">
+        <view class="context">{{item.context}}</view>
+        <view class="imgs">
+            <image wx:for="{{item.imgs}}" mode="aspectFill" wx:for-item="img" wx:key="index" wx:for-index="i" src="{{img}}" class="{{item.imgs.length == 1?'k':'sc'}}" data-index="{{index}}" data-i="{{i}}" wx:if="{{i <= 5}}"></image>
+            <view class="num" wx:if="{{item.imgs.length > 6}}">+{{item.imgs.length - 6}}</view>
+        </view>
+    </view>
+</view>
+<view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+<view class="bot-toast" wx:if="{{isToast && !isLoading}}">— 没有了 —</view>
+<view class="empty-article" wx:if="{{articeList.length == 0 && !isLoading}}">
+    你还没有发布帖子哦
+</view>

@@ -1,0 +1,26 @@
+.card{
+    display: flex;
+    width: 96%;
+    height: 300rpx;
+    line-height: 300rpx;
+    margin: 20rpx auto;
+    border-radius: 4rpx;
+    background-color: white;
+}
+
+.card image{
+    width: 200rpx;
+    height: 200rpx;
+    margin-top: 50rpx;
+    margin-left: 50rpx;
+    margin-right: 200rpx;
+    border-radius: 4rpx;
+}
+.card view{
+    font-size: 36rpx;
+    font-weight: bolder;
+}
+.kkkkkk{
+    margin-top: 400rpx;
+    text-align: center;
+}

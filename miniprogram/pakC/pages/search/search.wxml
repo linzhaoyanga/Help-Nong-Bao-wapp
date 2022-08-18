@@ -1,0 +1,38 @@
+<view class="contert">
+    <input type="text" class="inp" auto-focus="true" placeholder="搜索您想要的商品" model:value="{{keyword}}" />
+    <view class="searchText" bindtap="sosuo">搜索</view>
+</view>
+<view class="return" wx:if="{{kkk == 1}}" bindtap="return">
+<image src="../../images/good-return.png"></image>
+</view>
+<!-- 默认展示页 -->
+<view wx:if="{{aaa == 1}}" class="history">
+    <view class="header">
+        <view class="left">历史搜索</view>
+        <view class="right" bindtap="clearHistory">
+            <image src="../../images/story-delete.png"></image>
+        </view>
+    </view>
+    <view class="bot">
+        <view class="search-name" wx:for="{{historys}}" wx:key="index" data-index="{{item}}" bindtap="search">{{item}}</view>
+    </view>
+</view>
+<!-- 展示内容 -->
+<view class="goods">
+    <view wx:for="{{historyList}}" wx:key="index" class="good" bindtap="index" data-index="{{item._id}}">
+        <view class="left">
+            <image src="{{item.imgs[0]}}" mode="aspectFill"></image>
+        </view>
+        <view class="right">
+            <view class="name">{{item.title}}</view>
+            <view class="content">{{item.content}}</view>
+            <view class="price">￥{{item.price}}</view>
+        </view>
+        <view class="no-good" wx:if="{{item.num == 0}}">暂时无货</view>
+    </view>
+</view>
+<view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+<view class="bot-toast" wx:if="{{isToast && !isLoading}}">— 没有更多搜索结果了 —</view>
+<view class="empty-good" wx:if="{{flog}}">
+    没有搜索到商品哦
+</view>

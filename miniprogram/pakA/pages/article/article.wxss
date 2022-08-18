@@ -1,0 +1,66 @@
+@import "../common/lib/weui.wxss";
+@import "./assets/iconfont.wxss";
+
+page{
+    width: 740rpx;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+
+}
+.title {
+  border: 1rpx solid #f2f2f2;
+  margin: 10rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+}
+.picker{
+  padding: 10rpx;
+}
+.wrapper {
+  padding: 5px;
+}
+
+.iconfont {
+  display: inline-block;
+  padding: 8px 8px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.toolbar {
+  box-sizing: border-box;
+  border-bottom: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.ql-container {
+  box-sizing: border-box;
+  padding: 12px 15px;
+  width: 100%;
+  min-height: 30vh;
+  height: auto;
+  background: #fff;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1rpx solid #f2f2f2;
+  border-radius: 15rpx;
+}
+
+.ql-active {
+  color: #497749;
+}
+
+.button{
+  color: white;
+  font-size: 32rpx;
+  margin-top: 50rpx;
+  background-color: #497749!important;
+}
+.kkkkkk{
+    margin-top: 400rpx;
+    text-align: center;
+}

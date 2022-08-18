@@ -1,0 +1,65 @@
+<view class="box" bindtap="address">
+    <view class="default" wx:if="{{k == false && address.flog}}">
+        <view>默认地址</view>
+    </view>
+    <view class="bot">
+        <view class="left">
+            <view class="address" wx:if="{{k == false}}">{{address.easyAddress[0]}} {{address.easyAddress[1]}} {{address.easyAddress[2]}} {{address.detailAddress}}</view>
+            <view class="name" wx:if="{{k == false}}">{{address.username}} {{address.phone}}</view>
+            <view class="address" wx:if="{{k}}">你还没有填写收货地址，快去填写吧</view>
+        </view>
+        <view class="right">
+            <image src="../../images/right.png"></image>
+        </view>
+    </view>
+</view>
+<view class="box2">
+    <view class="header">订单 · 共{{isBuy? 1:choseNum}}件</view>
+    <view class="goods" wx:for="{{isBuy ? buyGood[0].goods : chooseGoods}}" wx:key="index">
+        <view class="good">
+            <view class="left">
+                <image src="{{item.img}}" mode="aspectFill"></image>
+            </view>
+            <view class="middle">{{item.title}}</view>
+            <view class="right">
+                <view class="price">￥{{item.price}}</view>
+                <view class="num">X {{item.num}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="total">
+        <view class="total-price">
+            <view>商品总价</view>
+            <view>￥{{isBuy ? buyGood[0].goodsPrice : goodsPrice}}</view>
+        </view>
+        <view class="port-price">
+            <view>运费</view>
+            <view>￥{{isBuy ? buyGood[0].portPrice : portPrice}}</view>
+        </view>
+        <view class="port-price">
+            <view>支付方式</view>
+            <view>
+                <picker bindchange="bindPickerChange" model:value="{{index}}" range="{{array}}">
+                    <view class="picker">
+                        {{objectArray[index].name}}
+                    </view>
+                </picker>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="box3">
+    <view class="header">备注</view>
+    <view class="content">
+        <textarea model:value="{{remarks}}"></textarea>
+    </view>
+</view>
+
+<view class="pay">
+    <view class="left">合计：<text class="cor">￥{{isBuy ? buyGood[0].totalPrice : totalPrice}}</text></view>
+    <view class="right">
+        <view class="btn" bindtap="submitOrder">
+            去支付
+        </view>
+    </view>
+</view>

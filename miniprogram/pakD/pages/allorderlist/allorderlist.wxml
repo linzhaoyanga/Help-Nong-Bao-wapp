@@ -1,0 +1,123 @@
+<view class="list" wx:for="{{list}}" wx:key="{{index}}">
+    <view wx:if="{{item.state == 0}}">
+        <view class="middle" wx:for="{{listto}}" wx:key="{{index}}">
+            <view class="left">
+                <image src="{{item.img}}" mode="aspectFill"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{item.title}}</view>
+                <view class="price">￥{{item.price}}</view>
+                <view class="num">X {{item.num}}</view>
+            </view>
+        </view>
+        <view class="total">
+            <view class="header">总计</view>
+            <view class="t">
+                <view class="total-num">总数：{{item.goodsNum}}</view>
+                <view class="total-price">总价：￥{{item.totalPrice}}</view>
+            </view>
+
+            <view class="header">收货地址</view>
+            <view class="b">
+                <view class="address">{{item.address.easyAddress[0]}} {{item.address.easyAddress[1]}} {{item.address.easyAddress[2]}} {{item.address.detailAddress}}</view>
+                <view class="user">{{item.address.phone}} {{item.address.username}}</view>
+            </view>
+            <view class="useroder">{{item.userOder}}</view>
+        </view>
+        <view class="bot">
+            <view class="time">下单时间: {{item.createTime}}</view>
+            <view class="go" bindtap="goHair">取消订单</view>
+        </view>
+    </view>
+    <view wx:if="{{item.state == 1}}">
+        <view class="middle" wx:for="{{listto}}" wx:key="{{index}}">
+            <view class="left">
+                <image src="{{item.img}}" mode="aspectFill"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{item.title}}</view>
+                <view class="price">￥{{item.price}}</view>
+                <view class="num">X {{item.num}}</view>
+            </view>
+        </view>
+        <view class="total">
+            <view class="header">总计</view>
+            <view class="t">
+                <view class="total-num">总数：{{item.goodsNum}}</view>
+                <view class="total-price">总价：￥{{item.totalPrice}}</view>
+            </view>
+
+            <view class="header">收货地址</view>
+            <view class="b">
+                <view class="address">{{item.address.easyAddress[0]}} {{item.address.easyAddress[1]}} {{item.address.easyAddress[2]}} {{item.address.detailAddress}}</view>
+                <view class="user">{{item.address.phone}} {{item.address.username}}</view>
+            </view>
+            <view class="useroder">{{item.userOder}}</view>
+            <view class="header">快递单号</view>
+            <view class="Add">{{item.oderAdd}}</view>
+        </view>
+        <view class="bot">
+            <view class="time">下单时间: {{item.createTime}}</view>
+            <view class="go" bindtap="gogogo">确认收货</view>
+        </view>
+    </view>
+    <view wx:if="{{item.state == 2}}">
+        <view class="middle" wx:for="{{listto}}" wx:key="{{index}}">
+            <view class="left">
+                <image src="{{item.img}}" mode="aspectFill"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{item.title}}</view>
+                <view class="price">￥{{item.price}}</view>
+                <view class="num">X {{item.num}}</view>
+            </view>
+        </view>
+        <view class="total">
+            <view class="header">总计</view>
+            <view class="t">
+                <view class="total-num">总数：{{item.goodsNum}}</view>
+                <view class="total-price">总价：￥{{item.totalPrice}}</view>
+            </view>
+
+            <view class="header">收货地址</view>
+            <view class="b">
+                <view class="address">{{item.address.easyAddress[0]}} {{item.address.easyAddress[1]}} {{item.address.easyAddress[2]}} {{item.address.detailAddress}}</view>
+                <view class="user">{{item.address.phone}} {{item.address.username}}</view>
+            </view>
+            <view class="useroder">{{item.userOder}}</view>
+        </view>
+        <view class="bot">
+            <view class="time">下单时间: {{item.createTime}}</view>
+        </view>
+    </view>
+    <view wx:if="{{item.state == 3}}">
+        <view class="middle" wx:for="{{listto}}" wx:key="{{index}}">
+            <view class="left">
+                <image src="{{item.img}}" mode="aspectFill"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{item.title}}</view>
+                <view class="price">￥{{item.price}}</view>
+                <view class="num">X {{item.num}}</view>
+            </view>
+        </view>
+        <view class="total">
+            <view class="header">总计</view>
+            <view class="t">
+                <view class="total-num">总数：{{item.goodsNum}}</view>
+                <view class="total-price">总价：￥{{item.totalPrice}}</view>
+            </view>
+
+            <view class="header">收货地址</view>
+            <view class="b">
+                <view class="address">{{item.address.easyAddress[0]}} {{item.address.easyAddress[1]}} {{item.address.easyAddress[2]}} {{item.address.detailAddress}}</view>
+                <view class="user">{{item.address.phone}} {{item.address.username}}</view>
+            </view>
+            <view class="useroder">{{item.userOder}}</view>
+        </view>
+        <view class="bot">
+            <view class="time">下单时间: {{item.createTime}}</view>
+            <view class="go" bindtap="goHair">取消订单</view>
+        </view>
+    </view>
+</view>

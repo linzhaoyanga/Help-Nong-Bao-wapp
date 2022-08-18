@@ -1,0 +1,410 @@
+{
+    "setting": {
+        "compileHotReLoad": true
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide",
+                    "query": ""
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/store/store",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/cart/cart",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/order/order",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/regard/regard",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/commercial/commercial",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/more/more",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/note/note",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/my/my",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/switch/switch",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/orderfrom/orderfrom",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/details/details",
+                    "query": "id=b69f67c062987aef059adb7e19ed9d2a",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/message/message",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/call/call",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/individual/individual",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/enterprise/enterprise",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/address/address",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/address/address",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/joinaddress/joinaddress",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/order/order",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/message/message",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/pubdatails/pubdatails",
+                    "query": "obj%7B%22_id%22%3A%22f6e08a64629eca2b06fb5c0a6641e2b6%22%2C%22_openid%22%3A%22o7zHw5YTbcMqGipt8qGsxPGSQdm8%22%2C%22content%22%3A%22dadasdas%22%2C%22pubId%22%3A%22f6e08a64629b7b450699bf451671cfcd%22%2C%22pubName%22%3A%22.%22%2C%22temp%22%3A1%2C%22time%22%3A%222022-06-07%2011%3A46%3A51%22%2C%22title%22%3A%22sad%22%2C%22type%22%3A%22%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%9F%A5%22%2C%22userId%22%3A%22%22%7D=undefined",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/details/details",
+                    "query": "id=0ab5303b629eefc20829f5a43f00cbc4",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/order/order",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/details/details",
+                    "query": "id=ca780ad5629ef1a4065b45f90d1f6ba4",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/store/store",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/goodlist/goodlist",
+                    "query": "id=0ab5303b629ca9a707d60cc40764fc2c",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/community/community",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/push/push",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/post/post",
+                    "query": "id=16db756f62ab22820753d8cd643c76ba",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakB/pages/post/post",
+                    "query": "id=16db756f62ab22820753d8cd643c76ba",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/details/details",
+                    "query": "id=ca780ad5629ef1a4065b45f90d1f6ba4",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/details/details",
+                    "query": "id=ca780ad5629ef1a4065b45f90d1f6ba4",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/sortList/sortList",
+                    "query": "type=%E7%A7%91%E6%99%AE",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/details/details",
+                    "query": "id=0a4ec1f962a1fadf099fb94d3eea0ba4",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakC/pages/good/good",
+                    "query": "id=b69f67c0629cadb405fe5e9d05da5e70",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/switch/switch",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakC/pages/search/search",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/orderfrom/orderfrom",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/orderfrom/orderfrom",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/orderfrom/orderfrom",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/orderfrom/orderfrom",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/c/c",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/mycommodity/mycommodity",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/orderfrom/orderfrom",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/allorder/allorder",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/note/note",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakC/pages/order/order",
+                    "query": "good=%7B%22_id%22%3A%226d85a2b962b07db90bb72f2d5af67ac5%22%2C%22_openid%22%3A%22o7zHw5YTbcMqGipt8qGsxPGSQdm8%22%2C%22_updateTime%22%3A1655733720979%2C%22businessId%22%3A%22o7zHw5YTbcMqGipt8qGsxPGSQdm8%22%2C%22buyVolume%22%3A4%2C%22content%22%3A%22dsadas%22%2C%22freight%22%3A%2210.00%22%2C%22goodType%22%3A0%2C%22imgs%22%3A%5B%22cloud%3A%2F%2Fenv-8g3zj4v40ddceade.656e-env-8g3zj4v40ddceade-1312061176%2Fgood%2F624402l4mt2vf0%22%5D%2C%22num%22%3A1%2C%22originalPrice%22%3A%2240.00%22%2C%22price%22%3A%2220.00%22%2C%22shippingAddress%22%3A%22%E5%8C%97%E4%BA%AC%E5%B8%82%20%E5%8C%97%E4%BA%AC%E5%B8%82%20%E4%B8%9C%E5%9F%8E%E5%8C%BA%22%2C%22state%22%3A1%2C%22title%22%3A%22dsadas%22%2C%22type%22%3A2%7D",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/allorder/allorder",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakA/pages/article/article",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/enterprise/enterprise",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/individual/individual",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakC/pages/sortList/sortList",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakC/pages/sort/sort",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakD/pages/joinaddress/joinaddress",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pakC/pages/good/good",
+                    "query": "id=f6e08a6462bd94260a611a013abd697f",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "projectname": "miniprogram-2"
+}

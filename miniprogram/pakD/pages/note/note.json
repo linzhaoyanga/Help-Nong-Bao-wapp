@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText":"我的帖子",
+  "usingComponents": {},
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#F4F5F7",
+  "backgroundTextStyle":"dark"
+}

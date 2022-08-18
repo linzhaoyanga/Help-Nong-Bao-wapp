@@ -1,0 +1,35 @@
+page{
+    background-color: #f9f9f9;
+}
+
+.container{
+    margin: 20rpx;
+    margin-top: 40rpx;
+    margin-bottom: auto;
+    background-color: white;
+    padding: 20rpx;
+}
+
+.container .title{
+    width: 100%;
+    margin-top: 20rpx;
+    margin-bottom: 50rpx;
+    font-size: 36rpx;
+    font-weight: bolder;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid rgb(240, 235, 235);
+}
+
+.container .context{
+    font-size: 28rpx;
+    height: auto;
+}
+
+.container .bot{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100rpx;
+    font-size: 24rpx;
+    color: #ccc;
+}

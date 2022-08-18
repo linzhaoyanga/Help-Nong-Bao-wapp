@@ -1,0 +1,50 @@
+<view class="search">
+    <view class="inpp" bindtap="goSearch">
+        <image class="ss" src="/images/sosuo.png"></image>
+        <input type="text" class="inp" placeholder="搜索你想要的文章吧" disabled />
+    </view>
+</view>
+<view wx:if="{{state == 0}}">
+    <scroll-view scroll-x="true" class="tab" show-scrollbar="{{false}}" enhanced="{{true}}">
+        <view wx:for="{{types}}" bindtap="changeTab" data-index="{{index}}" wx:key="index" class="{{index == typeIndex ? 'a tab-active':'a'}}">{{item}}</view>
+    </scroll-view>
+    <view class="box1">
+        <view class="nyzx" wx:for="{{articeList}}" wx:key="index" bindtap="details" data-id="{{item._id}}">
+            <view class="left" wx:if="{{item.coverPic}}">
+                <image src="{{item.coverPic}}" mode="aspectFill"></image>
+            </view>
+            <view class="{{item.coverPic?'right':'kkkk'}}">
+                <view class="top">{{item.title}}</view>
+                <view class="context">
+                    {{item.coverText}}
+                </view>
+                <view class="bot">
+                    <view class="read" wx:if="{{item.readVolume > 0}}">{{item.readVolume}}人阅读</view>
+                    <view class="time">{{item.createTime}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="box" wx:if="{{state != 0}}">
+    <view class="nyzx" wx:for="{{articeList}}" wx:key="index" bindtap="details" data-id="{{item._id}}">
+        <view class="left" wx:if="{{item.coverPic}}">
+            <image src="{{item.coverPic}}" mode="aspectFill"></image>
+        </view>
+        <view class="{{item.coverPic?'right':'kkkk'}}">
+            <view class="top">{{item.title}}</view>
+            <view class="context">
+                {{item.coverText}}
+            </view>
+            <view class="bot">
+                <view class="read" wx:if="{{item.readVolume > 0}}">{{item.readVolume}}人阅读</view>
+                <view class="time">{{item.createTime}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+<view class="bot-toast" wx:if="{{!flog && isToast && !isLoading}}">— 没有了 —</view>
+<view class="empty-article" wx:if="{{flog && !isLoading}}">
+    本栏目暂时还没有文章哦
+</view>

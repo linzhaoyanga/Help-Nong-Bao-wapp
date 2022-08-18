@@ -1,0 +1,48 @@
+<view class="containr">
+    <block wx:for="{{index}}">
+        <view class="{{indty==index?'containername active':'containername '}}" bindtap="changindex" data-index="{{index}}">{{item}}</view>
+    </block>
+</view>
+<view class="kkkkk">
+    <view class="list" wx:for="{{list}}" wx:key="{{index}}">
+        <view class="top">
+            订单编号：<text>{{item._id}}</text>
+        </view>
+        <view class="middle" wx:for="{{item.goods}}" wx:for-item="good" wx:for-index="i" wx:key="{{i}}">
+            <view class="left">
+                <image src="{{good.img}}" mode="aspectFill"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{good.title}}</view>
+                <view class="price">￥{{good.price}}</view>
+                <view class="num">X {{good.num}}</view>
+            </view>
+            <view class="btnk" bindtap="{{indty == 1 && !good.userIsUse ? 'goSure':''}}" data-id="{{item._id}}" data-i="{{i}}" data-index="{{index}}" data-goodid="{{good.id}}" wx:if="{{indty == 1}}">{{indty == 1 && !good.userIsUse? '确认收货':'已收货'}}</view>
+        </view>
+        <view class="total">
+            <view class="header">总计</view>
+            <view class="t">
+                <view class="total-num">总数：{{item.goodsNum}}</view>
+                <view class="total-price">总价：￥{{item.totalPrice}}</view>
+            </view>
+            <view class="header">收货地址</view>
+            <view class="b">
+                <view class="address">{{item.address.easyAddress[0]}} {{item.address.easyAddress[1]}} {{item.address.easyAddress[2]}} {{item.address.detailAddress}}</view>
+                <view class="user">{{item.address.phone}} {{item.address.username}}</view>
+            </view>
+        </view>
+        <view class="bot">
+            <view class="time">下单时间: {{item.createTime}}</view>
+            <view class="go" bindtap="{{!item.isExit?'sure':''}}" data-id="{{item._id}}" data-type="1" data-index="{{index}}" wx:if="{{indty == 0 && !item.isExitOrder}}">{{item.isExit ?'订单取消中':'取消订单' }}</view>
+            <view class="go" wx:if="{{indty == 0 && item.isExitOrder}}">订单已取消</view>
+            <view class="go" bindtap="sure" data-id="{{item._id}}" data-type="2" data-index="{{index}}" wx:elif="{{indty == 1 && !kkkk}}">确认</view>
+            <block wx:elif="{{indty == 2}}">
+                <view class="go" bindtap="sure" data-id="{{item._id}}" data-type="3" data-k="1" data-index="{{index}}">退款</view>
+                <view class="go" bindtap="sure" data-id="{{item._id}}" data-type="3" data-k="2" data-index="{{index}}">退货</view>
+            </block>
+            <view class="go" wx:elif="{{indty == 3}}">已完结</view>
+        </view>
+    </view>
+    <view class="bot-loading" wx:if="{{isLoading}}">加载中...</view>
+    <view class="bot-toast" wx:if="{{isToast && !isLoading}}">{{indty==0? '你还没有待发货商品哦':''}} {{indty==1?'你还没有待收货商品哦':''}} {{indty==2?'你还没有已完成商品哦':''}} {{indty==3?'你还没有对货/退款商品哦':''}}</view>
+</view>

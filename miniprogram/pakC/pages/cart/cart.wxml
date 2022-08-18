@@ -1,0 +1,42 @@
+<view class="goods" wx:if="{{goodList.length > 0}}">
+    <view class="good" wx:for="{{goodList}}" wx:key="index">
+        <view class="left">
+            <radio  model:checked="{{item.flog}}" color="#53b175" bindtap="toggleChoose" data-id="{{item.id}}"></radio>
+        </view>
+        <view class="center" bindtap="goGood" data-id="{{item.id}}">
+            <image src="{{item.img}}" mode="aspectFill"></image>
+        </view>
+        <view class="right">
+            <view class="top">{{item.title}}</view>
+            <view class="bot">
+                <view class="price">￥{{item.price}}</view>
+                <view class="num">
+                    <view bindtap="reduceNum" data-id="{{item.id}}" class="reduce">-</view>
+                    <input type="number" name="num" value="{{item.num}}" class="number" />
+                    <view bindtap="addNum" data-id="{{item.id}}" class="add">+</view>
+                </view>
+            </view>
+        </view>
+        <view class="icon" >
+            <image src="../../images/delete.png" bindtap="removeGood" data-id="{{item.id}}"></image>
+        </view>
+    </view>
+</view>
+
+<view class="bot-tab" wx:if="{{goodList.length > 0}}">
+    <view class="left">
+        <radio  checked="{{choseNum > 0? true : false}}" disabled="{{choseNum <= 0? true : false}}" color="#53b175" bindtap="exitAll" data-flog="{{choseNum}}"></radio>已选{{choseNum}}
+    </view>
+    <view class="middle">
+        ￥{{goodsPrice}}
+    </view>
+    <view class="btn">
+        <text  class="{{choseNum > 0? 'js' : 'js ban'}}" bindtap="goOrder" data-flog="{{choseNum}}">结 算</text>
+    </view>
+</view>
+
+<view class="empty-cart" wx:if="{{goodList.length <= 0}}">
+<image src="../../images/cart-empty.png"></image>
+<view>购物车为空，快去商店转转吧！</view>
+<view class="return" bindtap="returnStore">返 回</view>
+</view>

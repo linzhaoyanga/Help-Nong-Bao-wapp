@@ -1,0 +1,98 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/my/my",
+        "pages/store/store",
+        "pages/community/community"
+    ],
+    "subPackages": [{
+        "root": "pakA",
+        "name": "pa",
+        "pages": [
+            "pages/sortList/sortList",
+            "pages/details/details",
+            "pages/article/article",
+            "pages/search/search"
+        ]
+    }, {
+        "root": "pakB",
+        "name": "pb",
+        "pages": [
+            "pages/push/push",
+            "pages/post/post",
+            "pages/search/search"
+        ]
+    }, {
+        "root": "pakC",
+        "name": "pc",
+        "pages": [
+            "pages/good/good",
+            "pages/cart/cart",
+            "pages/order/order",
+            "pages/sort/sort",
+            "pages/sortList/sortList",
+            "pages/search/search",
+            "pages/pay/pay"
+        ]
+    }, {
+        "root": "pakD",
+        "name": "pd",
+        "pages": [
+            "pages/joinaddress/joinaddress",
+            "pages/address/address",
+            "pages/switch/switch",
+            "pages/regard/regard",
+            "pages/commercial/commercial",
+            "pages/allorder/allorder",
+            "pages/allorderlist/allorderlist",
+            "pages/collect/collect",
+            "pages/message/message",
+            "pages/note/note",
+            "pages/call/call",
+            "pages/enterprise/enterprise",
+            "pages/individual/individual",
+            "pages/orderfrom/orderfrom",
+            "pages/prosn/prosn",
+            "pages/pubdatails/pubdatails",
+            "pages/management/management",
+            "pages/mycommodity/mycommodity"
+        ]
+    }],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "农产道",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#515151",
+        "selectedColor": "#DAA520",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页"
+
+            },
+            {
+                "pagePath": "pages/community/community",
+                "text": "农友圈"
+
+            },
+            {
+                "pagePath": "pages/store/store",
+                "text": "农资超市"
+
+
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的"
+            }
+        ]
+    },
+
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

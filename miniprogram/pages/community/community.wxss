@@ -1,0 +1,263 @@
+.container{
+    width: auto;
+    padding: 20rpx;
+    margin-bottom: 100rpx;
+}
+
+.ranking-list{
+    width: 100%;
+    height: 300rpx;
+    background-color: white;
+    border-radius: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.plac-input{
+    font-size: 28rpx;
+}
+
+.ranking-list .search-view{
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    display: flex;
+    margin: 10rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.ranking-list .search-view image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 10rpx;
+    padding-left: 10rpx;
+}
+
+.ranking-list .search-view .search{
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding-left: 10rpx;
+}
+.ranking-list .ranking-view{
+    width: auto;
+    margin: 10rpx;
+    margin-top: 20rpx;
+}
+
+.ranking-list .ranking-view .ranking{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-bottom: 10rpx;
+    font-size: 28rpx;
+}
+.ranking-list .ranking-view .ranking .left{
+    display: flex;
+}
+
+.imgggg{
+    width: 42rpx;
+    height: 48rpx;
+    margin-top: 5rpx;
+    margin-right: 10rpx;
+    margin-left: 5rpx;
+}
+
+.ranking-list .ranking-view .ranking .title{
+    width: 500rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #383838;
+}
+
+.ranking-list .ranking-view .ranking .support{
+    padding-left: 20rpx;
+    margin-right: 15rpx;
+    font-size: 22rpx;
+    color: #ccc;
+}
+
+
+.article-view{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.article-view .top{
+    width: auto;
+    padding: 10rpx;
+    padding-left: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-view .top .user{
+    display: flex;
+}
+
+
+.article-view .top .user image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 15rpx;
+    border-radius: 50%;
+}
+
+.article-view .top .user .name{
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+}
+
+.article-view .top .time{
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    color: #ccc;
+    margin-right: 20rpx;
+}
+
+.article-view .middle {
+    margin: 10rpx;
+    height: auto;
+}
+
+.article-view .middle .context{
+    margin: 12rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.article-view .middle .imgs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    position: relative;
+}
+
+.article-view .middle .imgs .k{
+    border-radius: 8rpx;
+    margin-left: 12rpx;
+}
+
+.article-view .middle .imgs .sc{
+    width: 200rpx;
+    height: 200rpx;
+    margin:12rpx;
+    border-radius: 8rpx;
+}
+
+.article-view .middle .imgs .num{
+    position: absolute;
+    bottom: 20rpx;
+    right: 50rpx;
+    width: 40rpx;
+    height: 40rpx;
+    line-height:40rpx;
+    padding-left: 8rpx;
+    padding-right: 8rpx;
+    text-align: center;
+    border-radius: 40rpx;
+    opacity: 0.6;
+    background-color: black;
+    color: white;
+    font-size: 24rpx;
+}
+
+.article-view .bot{
+    display: flex;
+    width: auto;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 12rpx;
+    justify-content:center;
+}
+
+.article-view .bot .card{
+    display: flex;
+    justify-content: center;
+    width: 200rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-right: 20rpx;
+}
+
+.share{
+    width: 100%!important;
+    height: 80rpx!important;
+}
+
+
+.article-view .bot .card image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 20rpx;
+}
+
+.article-view .bot .card view{
+    margin-top: 8rpx;
+    margin-left: 8rpx;
+    font-size: 24rpx;
+    color: #ccc;
+}
+
+.article-view .bot .card .share image{
+    width: 50rpx!important;
+    height: 50rpx!important;
+    margin-top: 2rpx!important;
+}
+
+.right-tab{
+    position: fixed;
+    bottom: 300rpx;
+    right: 40rpx;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.right-tab .tab {
+    margin-bottom: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background-color: #53b175;
+}
+
+.right-tab .tab image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 16rpx;
+}
+
+.right-tab .tab  view{
+    font-size: 23rpx;
+    color: white;
+}
+
+
+.bot-toast{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}
+.kkkkkk{
+    margin-top: 400rpx;
+}

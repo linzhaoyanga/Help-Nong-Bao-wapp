@@ -1,0 +1,25 @@
+
+<view   class="tab">
+<view  class="hint">为保障您的交易安全，请确认您的寄件信息</view>
+<view  class="message">
+<image  class="picture"  src="/image/寄件人.png"></image>
+<view  class="phone">张三三   1234567890</view>  
+<view   class="detail">河南省郑州市管城回族区</view>
+<view class="getLocation"  bindtap="getLocation">地址薄</view>
+</view>
+<view  class="odd">
+<view  class="exp">快递单号</view>
+<input  class="ex" type="text" value="{{result}}"  auto-focus placeholder="请输入快递单号" />
+<image  class="p"  bindtap="getscancode" src="/image/扫一扫.png"></image>
+</view>
+<view  class="pany">
+  <view  class="exp">快递公司</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<button  class="submit" bindtap="show" >提交</button>
+<view  bindtap="showtip"  class="not">无需寄件</view>
+</view>

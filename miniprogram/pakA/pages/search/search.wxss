@@ -1,0 +1,188 @@
+/* pakA/pages/search/search.wxss */
+.contert {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rpx;
+    padding-bottom: 20rpx;
+}
+
+.inp {
+    width: 640rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color: #f7f7f7;
+    margin-left: 16rpx;
+    vertical-align: top;
+    padding-left: 40rpx;
+    font-size: 24rpx;
+}
+
+.searchText{
+    width: 120rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    color: #000000;
+    text-align: center;
+}
+
+
+.history{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.history .header{
+    width: 96%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+.history .header .left{
+    color: #000;
+    font-weight: bolder;
+}
+
+.history .header .right{
+    
+}
+
+.history .header .right image{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.history .bot{
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10rpx auto;
+}
+
+.history .bot .search-name{
+    width: auto;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin: 10rpx;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    border-radius: 40rpx;
+    font-size:24rpx;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.box{
+    width: 98%;
+    margin: auto;
+    margin-top: 10rpx;
+}
+
+.nyzx {
+    display: flex;
+    width: 100%;
+    height: 200rpx;
+    margin-bottom: 20rpx;
+    line-height: 200rpx;
+    border-radius: 10rpx;
+    background-color: white;
+}
+
+.nyzx .left {
+    flex: 4;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.nyzx .left image {
+    width: 280rpx;
+    height: 160rpx;
+    border-radius: 10rpx;
+}
+
+.nyzx .right {
+    width: 400rpx;
+    height: 160rpx;
+    margin: 20rpx;
+    margin-left: 0;
+}
+
+.kkkk{
+    width: 800rpx;
+    height: 160rpx;
+    margin: 20rpx;
+}
+
+.nyzx  .top {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nyzx  .context{
+    width: 100%;
+    height: 80rpx;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    color: rgb(128, 128, 128);
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.nyzx  .bot {
+    display: flex;
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    position: relative;
+    color: #ccc;
+    font-size: 20rpx;
+}
+
+.nyzx  .bot .time {
+    position: absolute;
+    right: 10rpx;
+}
+
+.return{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    background-color: white;
+    text-align: right;
+}
+
+.return image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+}
+
+.empty-good {
+    margin: auto;
+    margin-top: 300rpx;
+    color:#ccc;
+}
+
+.bot-toast {
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 20rpx;
+    margin-bottom: 140rpx;
+    color: #ccc;
+}
+

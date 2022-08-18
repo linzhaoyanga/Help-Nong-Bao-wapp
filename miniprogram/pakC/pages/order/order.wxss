@@ -1,0 +1,175 @@
+page{
+  background-color: #f2f2f2;
+}
+.box {
+    padding: 30rpx 20rpx;
+    background-color: white;
+}
+
+.box  .default view{
+    width: 120rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 4rpx;
+    color: white;
+    text-align: center;
+    font-size: 24rpx;
+    background-color: #53b175;
+}
+
+.box .bot{
+    display: flex;
+    margin-top: 10rpx;
+}
+
+.box .bot .left{
+    flex: 8;
+    font-size: 28rpx;
+}
+
+.box .bot .left .address{
+    color: #000;
+    font-weight: bold;
+}
+
+.box .bot .left .name{
+    margin-top: 10rpx;
+}
+
+.box .bot .right{
+    flex: 2;
+    text-align: right;
+}
+
+.box .bot .right image{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.box2 {
+    width: 100%;
+    margin-top: 40rpx;
+    background-color: white;
+}
+
+.header{
+    height: 100rpx;
+    line-height: 100rpx;
+    border-left: 8rpx solid #53b175;
+    padding-left: 10rpx;
+    border-bottom: 1rpx solid rgb(241, 241, 241);
+}
+
+.box2 .goods{
+    padding: 20rpx;
+}
+
+.box2 .goods .good{
+    display: flex;
+    height: 160rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid rgb(241, 241, 241);
+}
+
+.box2 .goods .good .left{
+    flex: 3;
+}
+
+.box2 .goods .good .left image{
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 4rpx;
+}
+
+.box2 .goods .good .middle{
+    flex: 6;
+    padding-left: 10rpx;
+    text-align: 22rpx;
+    color: #000;
+}
+
+.box2 .goods .good .right{
+    flex: 1;
+    text-align: right;
+}
+
+.box2 .goods .good .right .num{
+    margin-top: 60rpx;
+    color:#e2c366;
+}
+
+
+.box2 .total {
+    padding: 20rpx;
+    font-size: 28rpx;
+}
+
+.box2 .total .total-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box2 .total .port-price{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box3{
+    margin-top: 30rpx;
+    margin-bottom: 160rpx;
+    background-color: white;
+}
+
+.box3 .content{
+    padding: 20rpx;
+}
+
+.box3 .content textarea{
+    width: auto;
+    height: 200rpx;
+    margin-top: 20rpx;
+    padding: 10rpx;
+    border-radius: 8rpx;
+    background-color: #f7f7f7;
+}
+
+.pay{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 120rpx;
+    line-height: 120rpx;
+    background-color: white;
+    z-index: 999;
+    border-top: 1rpx solid #ccc;
+}
+
+.pay .left{
+    margin-left: 20rpx;
+    font-size: 24rpx;
+}
+
+.pay .left .cor{
+    color: #c85945;
+    font-size: 32rpx;
+}
+
+.pay .right{
+    margin-right: 20rpx;
+    text-align: center;
+}
+
+.pay .right .btn{
+    width: 160rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    color: white;
+    background-color: #c85945;
+}
+

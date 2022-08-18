@@ -1,0 +1,71 @@
+<view class="box" >
+    <view class="back"></view>
+    <!-- 头像部分 -->
+    <view class="view">
+        <image class="imgg" src="{{head_img_url?head_img_url:'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F9fo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F0df3d7ca7bcb0a463086c0426863f6246b60af21.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656044956&t=87c1ed296c476bd2355a1244ec3b525f'}}"></image>
+        <text class="cl" bindtap="getUserProfile">{{nickname?nickname:'点击登录'}}</text>
+    </view>
+    <!-- 收藏消息部分 -->
+    <view class="xiaoxi" >
+        <view class="vitem" bindtap="b">
+            <image src="/images/fb.png"></image>
+            <view>发布</view>
+        </view>
+        <view class="vitem" bindtap="goCollect">
+            <image src="/images/sc.png"></image>
+            <view>收藏</view>
+        </view>
+        <view class="vitem" bindtap="a">
+            <image src="/images/xx.png"></image>
+            <view>消息</view>
+        </view>
+        <view class="vitem" bindtap="godingdan">
+            <image src="../../images/tab-my-order.png"></image>
+            <view>订单</view>
+        </view>
+    </view>
+    <view class="business" bindtap="merchant" wx:if="{{isLogin  && typess == 1}}">
+        <image class="fz" mode="widthFix" src="../../images/my-tab-business.png"></image>
+    </view>
+    <!-- 商家 -->
+    <view wx:if="{{isMerchant && typess == 1}}" >
+        <view class="xiaoxi">
+            <view class="line" class="cll"> 商家</view>
+            <view class="line" bindtap="publish" >
+                <image src="/images/tab-pub-good.png"></image>发布商品
+            </view>
+            <view class="line" bindtap="productOrder">
+                <image src="/images/tab-good-order.png"></image>商品订单
+            </view>
+            <view class="line" bindtap="goMyGoods">
+                <image src="/images/tab-my-good.png"></image>我的商品
+            </view>
+        </view>
+    </view>
+    <!-- 实用工具 -->
+    <view class="xiaoxi">
+        <view class="line" class="cll"> 实用工具</view>
+        <view class="line" bindtap="address" wx:if="{{isLogin  && typess == 1}}">
+            <image src="/images/tab-address.png"></image>收货地址
+        </view>
+        <view class="line" bindtap="article" wx:if="{{isPushArticle && typess == 1}}">
+            <image src="/images/tab-pub-good.png"></image>发布文章
+        </view>
+        <view class="line" bindtap="regard">
+            <image src="/images/tab-aboutas.png" class="kkkkkk"></image>关于我们
+        </view>
+        <view class="line">
+            <button open-type="feedback" hover-class="none" class="btn">
+                <image src="/images/tab-fb.png"></image>意见反馈
+            </button>
+        </view>
+        <view class="line">
+            <button open-type="contact" hover-class="none" class="btn">
+                <image src="/images/tab-service.png" class="kkkkk"></image>联系客服
+            </button>
+        </view>
+        <view class="line" bindtap="openSetting">
+            <image src="/images/tab-setup.png"></image>系统设置
+        </view>
+    </view>
+</view>

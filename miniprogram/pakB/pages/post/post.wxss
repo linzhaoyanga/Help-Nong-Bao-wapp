@@ -1,0 +1,286 @@
+page {
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+}
+
+.container .content {
+    width: 97%;
+    margin: auto;
+    height: auto;
+}
+
+.container .content .writer-info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 120rpx;
+    background-color: white;
+}
+
+.container .content .writer-info .left {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 300rpx;
+    height: 120rpx;
+    margin-left: 10rpx;
+}
+
+.container .content .writer-info .left image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 20rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container .content .writer-info .left image:hover {
+    opacity: 0.8;
+}
+
+.container .content .writer-info .left .middle {
+    padding-top: 30rpx;
+    margin-left: 10rpx;
+}
+
+.container .content .writer-info .left .middle .name {
+    padding-left: 10rpx;
+    font-size: 28rpx;
+}
+
+.container .content .writer-info .left .middle .time {
+    padding-left: 10rpx;
+    margin-top: 10rpx;
+    color: #ccc;
+    font-size: 20rpx;
+}
+
+.container .content .writer-info .right {
+    display: flex;
+    justify-content: left;
+    width: 220rpx;
+    height: 100rpx;
+    margin-top: 10rpx;
+    margin-right: 10rpx;
+}
+
+
+.container .content .writer-info .right .support image {
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 26rpx;
+    margin-right: 20rpx;
+    margin-left: 10rpx;
+}
+
+
+.writer-info .right .share {
+    width: 160rpx;
+    height: 50rpx;
+    line-height: -10rpx;
+    margin-top: 30rpx;
+    border-radius: 40rpx;
+    background-color: #ddeef6;
+    position: relative;
+}
+
+.writer-info .right .share image {
+    width: 36rpx !important;
+    height: 36rpx !important;
+    margin-left: -20rpx !important;
+    position: absolute;
+    top:9rpx;
+    left: 40rpx;
+}
+
+.writer-info .right .share>view {
+    font-size: 24rpx;
+    color: #63a2c4;
+    position: absolute;
+    top:10rpx;
+    left: 70rpx;
+}
+
+.container .content .word-info {
+    width: auto;
+    margin: 10rpx;
+    margin-bottom: 40rpx;
+}
+
+.container .content .word-info .text {
+    font-size: 36rpx;
+    color: #000;
+}
+
+.container .content .word-info .imgs {
+    margin: 20rpx auto;
+    text-align: center;
+}
+
+.container .content .word-info .imgs image {
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    width: 100%;
+}
+
+.container .comment {
+    border-top: 10rpx solid #f2f2f2;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.container .comment .header {
+    width: 95%;
+    margin: auto;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #000;
+    font-size: 36rpx;
+}
+
+.container .comment .content {
+    width: 95%;
+    margin: auto;
+}
+
+.container .comment .content .comments {
+    width: 100%;
+    height: auto;
+}
+
+.container .comment .content .comments li {
+    width: 100%;
+    height: auto;
+}
+
+.container .comment .content .comments li .top {
+    display: flex;
+    justify-content: baseline;
+    margin-top: 20rpx;
+}
+
+.container .comment .content .comments li .top image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    border: 1rpx solid rgb(236, 236, 236);
+}
+
+.container .comment .content .comments li .top image:hover {
+    opacity: 0.8;
+}
+
+.container .comment .content .comments li .top .name {
+    color: rgb(90, 90, 90);
+    font-size: 24rpx;
+    margin-left: 10rpx;
+    margin-top: 15rpx;
+}
+
+.container .comment .content .comments li .middle {
+    padding-left: 70rpx;
+    padding-right: 60rpx;
+    font-size: 28rpx;
+    text-align: left;
+    line-height: 40rpx;
+    margin-top: 10rpx;
+}
+
+.container .comment .content .comments li .bot {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid rgb(240, 235, 235);
+}
+
+.container .comment .content .comments li .bot .time {
+    font-size: 20rpx;
+    color: #ccc;
+    padding-top: 15rpx;
+    padding-left: 70rpx;
+}
+
+.container .comment .content .comments li .bot .heart image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.container .comment .content .comments li .bot .heart .num {
+    font-size: 24rpx;
+    padding-left: 5rpx;
+    padding-right: 5rpx;
+}
+
+.container .speak {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100rpx;
+    padding-top: 20rpx;
+    background-color: white;
+    z-index: 99999;
+}
+
+.container .speak .input {
+    width: 600rpx;
+    height: 80rpx;
+    border-radius: 8rpx;
+    background-color: #f7f7f7;
+    padding-left: 20rpx;
+    margin-left: 20rpx;
+    font-size: 28rpx;
+}
+
+.container .speak .send {
+    width: 120rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    margin-top: 15rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    font-size: 28rpx;
+    border-radius: 8rpx;
+    color: white;
+    background-color: #53b175;
+}
+
+.comment-empty {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+    font-size: 28rpx;
+    margin-bottom: 50px;
+}
+
+.comment-empty .empty-image {
+    width: 250rpx;
+    height: 250rpx;
+    margin-top: 100rpx;
+    margin-bottom: 40rpx;
+}
+
+
+.bot-toast {
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}
+
+.bot-loading{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 400rpx;
+    margin-bottom: 30rpx;
+    border-radius: 10rpx;
+    color: #ccc;
+}

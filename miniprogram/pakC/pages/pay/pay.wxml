@@ -1,0 +1,7 @@
+<view class="container">
+    <image src="../../images/store-pay-good.png"></image>
+    <view wx:if="{{type == 1}}">你选择了在线支付，支付成功，支付金额￥{{money}}元</view>
+    <view wx:else="{{type == 2}}">你选择了货到付款，收货后，需支付￥{{money}}元</view>
+    <view class="btn" bindtap="goOrder">查 看 订 单</view>
+    <view class="btn" bindtap="goStore">返 回 商 城</view>
+</view>

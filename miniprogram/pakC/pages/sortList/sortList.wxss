@@ -1,0 +1,119 @@
+
+.button {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-left: 8rpx;
+    margin-bottom: 50rpx;
+    margin-top: 20rpx;
+}
+
+.xhz {
+    position: relative;
+    width: 44%;
+    height: auto;
+    margin: 10rpx;
+    padding: 9rpx;
+    padding-bottom: 20rpx;
+    border: 1rpx solid #e2e2e2;
+    border-radius: 40rpx;
+    overflow: hidden;
+    display: inline-block;
+    background-color: white;
+}
+
+.xhz image {
+    width: 100%;
+    height: 280rpx;
+    margin-bottom: 10rpx;
+    border-radius: 30rpx;
+}
+
+.xhz image:hover {
+    opacity: 0.8;
+}
+.no-good{
+    position: absolute;
+    top:120rpx;
+    left: 70rpx;
+    width: 200rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: white;
+    text-align: center;
+    font-size: 28rpx;
+    background-color: #141613;
+    opacity: 0.6;
+    border-radius: 10rpx;
+}
+.text {
+    width: auto;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.he {
+    width: 100%;
+    color: #000;
+    height: 80rpx;
+    font-size: 28rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.sales {
+    margin-top: 10rpx;
+    margin-bottom: 25rpx;
+    color: #a6a6a6;
+    font-size: 20rpx;
+}
+
+.text .bot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text .bot .price {
+    color: #c85945;
+    font-size: 28rpx;
+}
+
+.text .bot .add {
+    width: 120rpx;
+    height: auto;
+    text-align: right;
+}
+
+.text .bot .add image {
+    width: 64rpx;
+    height: 53rpx;
+
+}
+
+.empty-good {
+    margin: auto;
+    margin-top: 200rpx;
+    font-size: 28rpx;
+    text-align: center;
+    color: #ccc;
+}
+
+.empty-good image {
+    width: 250rpx;
+    height: 250rpx;
+}
+
+.bot-toast {
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 0rpx;
+    margin-bottom: 40rpx;
+    color: #ccc;
+}
+.kkkkkk{
+    margin-top: 400rpx;
+    text-align: center;
+}

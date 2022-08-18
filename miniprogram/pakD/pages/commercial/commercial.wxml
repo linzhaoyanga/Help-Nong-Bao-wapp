@@ -1,0 +1,35 @@
+<!--pakA/pages/commercial/commercial.wxml-->
+<view class="tab">
+    <view class="hint">收件人信息</view>
+    <view class="box">
+        <view class="message">
+            <view class="left">
+                <view class="phone">{{address.username}} {{address.phone}}</view>
+                <view class="detail">{{address.easyAddress}} {{address.detailAddress}}</view>
+            </view>
+            <view class="right">
+                <view class="getLocation">复制</view>
+            </view>
+        </view>
+        <view class="odd">
+            <view class="left">
+                <view class="exp">快递单号</view>
+                <input class="ex" type="text" value="{{result}}" bindinput="aaa" auto-focus placeholder="请输入快递单号" 	placeholder-class="p-style" />
+            </view>
+            <view class="right">
+                <image class="p" bindtap="getscancode" src="../../images/scan.png"></image>
+            </view>
+        </view>
+        <view class="pany">
+            <view class="exp">快递公司</view>
+            <view class="bot"><text class="text">选择：</text>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+               <view class="{{array[index]? 'picker': 'picker p-style' }}">
+                    {{array[index]? array[index]: "请选择快递公司"}}
+                </view>
+            </picker></view>
+        </view>
+        <view class="submit" bindtap="show">提交</view>
+        <!-- <view bindtap="showtip" class="not">无需寄件</view> -->
+    </view>
+</view>

@@ -1,0 +1,168 @@
+page{
+    background-color: white;
+}
+
+.goods{
+    margin: auto 20rpx;
+    margin-top: 20rpx;
+    margin-bottom: 200rpx;
+}
+
+.good{
+    display: flex;
+    height: 200rpx;
+    border-bottom: 1rpx solid rgb(228, 228, 228);
+}
+
+.good .left{
+    flex: 1;
+    height: 200rpx;
+    line-height: 200rpx;
+    padding-left: 10rpx;
+}
+
+.good .center {
+    flex: 2;
+    height: 200rpx;
+    line-height: 200rpx;
+}
+
+.good .center image{
+    width: 160rpx;
+    height: 160rpx;
+    margin-top: 20rpx;
+    margin-right: 20rpx;
+    border-radius: 4rpx;
+}
+
+.good .right{
+    flex: 6;
+    height: 200rpx;
+}
+
+.good .right .top{
+    width: 400rpx;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 20rpx;
+}
+
+.good .right .bot{
+    display: flex;
+    position: relative;
+    margin-top: 80rpx;
+}
+
+.good .right .bot .price{
+    font-size: 32rpx;
+    color: #c85945;
+    font-weight: 500;
+}
+
+.good .right .bot .num{
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.good .right .bot .num .number{
+    width: 60rpx;
+    background-color: rgb(240, 238, 238);
+    margin: auto 5rpx;
+    text-align: center;
+}
+
+.good .icon{
+    flex: 1;
+}
+
+.good .icon image{
+    width: 28rpx;
+    height: 28rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}
+
+.bot-tab{
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 120rpx;
+    line-height: 120rpx;
+    background-color: #f7f7f7;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+.bot-tab .left{
+    flex: 2;
+}
+
+.bot-tab .right{
+    flex: 6;
+}
+
+.bot-tab .middle{
+    color: rgb(202, 32, 32);
+    font-size: 36rpx;
+}
+
+.bot-tab .btn{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    height: 120rpx;
+    text-align: center;
+}
+
+.bot-tab .btn .js{
+    margin-top: 20rpx;
+    width: 180rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    color:white;
+    background-color: #53b175;
+    z-index: 999;
+}
+
+.reduce,.add{
+    width: 50rpx;
+    text-align: center;
+}
+
+.empty-cart{
+    text-align: center;
+    font-size: 24rpx;
+    color: #ccc;
+}
+
+.empty-cart image{
+    width: 200rpx;
+    height: 200rpx;
+    margin-top: 200rpx;
+    margin-bottom: 20rpx;
+}
+
+.empty-cart .return{
+    width: 360rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: auto;
+    margin-top: 200rpx;
+    background-color: #53b175;
+    border-radius: 10rpx;
+    color:white;
+}
+
+.empty-cart .return:hover{
+    opacity: 0.8;
+}
+
+.ban{
+    opacity: 0.8;
+}

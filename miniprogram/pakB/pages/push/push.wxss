@@ -1,0 +1,95 @@
+/* pakB/pages/push/push.wxss */
+page{
+    background-color: #f4f8fb;
+}
+.container{
+    margin: 20rpx;
+}
+
+.plce{
+    color: #ccc;
+    font-size: 28rpx;
+}
+
+.input-context{
+    width:100%;
+    height: auto;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.input-context textarea{
+    width:auto;
+    height: 430rpx;
+    padding: 20rpx;
+    font-size: 32rpx;
+    background-color: white;
+}
+
+.imgs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30rpx;
+}
+
+.imgs .list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgs .list .img{
+    position: relative;
+    width:160rpx;
+    height: 160rpx;
+    margin-right: 17rpx;
+    margin-top: 20rpx;
+}
+
+.imgs .list .img image{
+    width:160rpx;
+    height: 160rpx;
+    background-color: white;
+    border-radius: 10rpx;
+}
+.imgs .list .img .move{
+    position: absolute;
+    width: 50rpx;
+    height: 50rpx;
+    text-align: center;
+    top: -10rpx;
+    right: -15rpx;
+}
+
+.imgs .list .img .move image{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.imgs .add {
+    display: inline-block;
+    width:160rpx;
+    height: 160rpx;
+    line-height:160rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    background-color: white;
+    margin-top: 20rpx;
+}
+
+.imgs .add image{
+    width: 100rpx;
+    height: 100rpx;
+    margin-top: 30rpx;
+}
+
+.push{
+    width: 500rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-top: 40rpx;
+    text-align: center;
+    background-color: #53b175;
+    color: white;
+    border-radius: 40rpx;
+}

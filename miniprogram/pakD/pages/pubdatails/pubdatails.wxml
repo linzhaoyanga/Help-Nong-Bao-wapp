@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="title">{{notice.title}}</view>
+    <view class="context">{{notice.content}}</view>
+    <view class="bot">
+        <view class="type">{{notice.type}}</view>
+        <view class="time">{{notice.time}}</view>
+        <view class="from">来自 {{notice.pubName}}</view>
+    </view>
+</view>

@@ -1,0 +1,60 @@
+<view wx:if="{{typess == 1}}">
+
+<view class="box">
+  <view class="a">
+    <view> 店铺名称</view>
+    <input type="text" maxlength="20" placeholder="请输入店铺名称" placeholder-class="p-style" model:value="{{storeName}}"/>
+  </view>
+  <view class="a">
+    <view> 单位名称</view>
+    <input type="text" placeholder="请输入统一社会代码" placeholder-class="p-style" model:value="{{companyName}}"/>
+  </view>
+  <view class="a">
+    <view> 社会代码</view>
+    <input type="text" placeholder="请输入统一社会代码" placeholder-class="p-style" model:value="{{societyCode}}"/>
+  </view>
+  <view class="a">
+    <view> 法人代表</view>
+    <input type="text" placeholder="请输入法人代表名字" placeholder-class="p-style" model:value="{{legalName}}"/>
+  </view>
+  <view class="a">
+    <view> 身份证号</view>
+    <input type="idcard" placeholder="请输入法人代表身份证号码" placeholder-class="p-style" model:value="{{idCard}}"/>
+  </view>
+  <view class="a">
+    <view> 电话</view>
+    <input type="number" placeholder="请输入法人代表电话" placeholder-class="p-style" model:value="{{phone}}"/>
+  </view>
+  <view class="a">
+    <view> 地址</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" class="picker-input">
+      <view class="choose-item">
+        <view class="{{region[2] != ''?'picker-text active': 'picker-text'}}">{{region[0]}} {{region[1]}} {{region[2]}}</view>
+      </view>
+    </picker>
+  </view>
+  <textarea class="detail-address" model:value="{{detailAddress}}" name="detailAddress" cols="30" rows="10" placeholder="请输入企事业单位详细地址" placeholder-class="p-style"></textarea>
+  <view class="a">
+    <view>企业简介</view>
+    <textarea class="enterprise-synopsis" model:value="{{enterpriseSynopsis}}" name="detailAddress" cols="30" rows="10" placeholder="请输入企业简介" placeholder-class="p-style"></textarea>
+  </view>
+  <view class="upload-license">
+    <view class="text">上传营业执照</view>
+    <view class="img">
+      <image src="{{source}}" wx:if="{{source != ''}}" mode="aspectFill" bindtap="priviewImg" data-src="{{source}}"></image>
+      <view class="upload" wx:if="{{source == ''}}" bindtap="uploadimg" data-id="2">
+        <image src="../../images/upload-img-license.png"></image>
+      </view>
+      <view class="delete" bindtap="deleteImg" data-id="2" wx:if="{{source != ''}}">
+        <image src="../../images/delete.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="btn-area">
+  <view class="btn" bindtap="submit">提交</view>
+</view>
+</view>
+<view wx:if="{{typess == 2}}" class="kkkkkk">
+此页面正在开发中</view>
+

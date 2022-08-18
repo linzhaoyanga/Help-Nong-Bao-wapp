@@ -1,0 +1,40 @@
+page{
+    background-color: #fdfdfd;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.container image{
+    width: 450rpx;
+    height: 400rpx;
+    margin: auto;
+    margin-top: 140rpx;
+    margin-right: 180rpx;
+}
+
+.container >view{
+    width: 600rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    margin-top: 100rpx;
+}
+
+.container .btn{
+    width: 480rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: white;
+    border-radius: 16rpx;
+    background-color: #53b175;
+    margin-top: 200rpx;
+}
+.container .btn:last-child{
+    margin-top: 40rpx;
+    background-color: white;
+    color: #515159;
+}

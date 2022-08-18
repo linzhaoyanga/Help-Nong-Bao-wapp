@@ -1,0 +1,199 @@
+page {
+    background-color: #F4F4F7;
+
+}
+
+.box {
+    position: relative;
+    margin-bottom: 100rpx;
+}
+.back{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 300rpx;
+    border-radius: 0 0 60rpx 60rpx;
+    background-image: linear-gradient(#4FC16B, #A2E8B4)
+}
+
+
+.view {
+    width: auto;
+    margin: auto 25rpx;
+    margin-top: 90rpx;
+    margin-bottom: 40rpx;
+}
+
+.imgg {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.cl {
+    color: #fff;
+    font-size: 32rpx;
+}
+
+/* 消息 */
+.xiaoxi {
+    width: 690rpx;
+    padding: 15rpx 10rpx;
+    margin: 18rpx auto;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+
+.vitem {
+    width: 172rpx;
+    display: inline-block;
+    text-align: center;
+}
+
+.vitem image {
+    width: 65rpx;
+    height: 65rpx;
+}
+
+.vitem view {
+    font-size: 28rpx;
+    color: #808080;
+}
+
+/* 订单 */
+.top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70rpx;
+    line-height: 60rpx;
+    border-bottom: 1rpx solid #CCCCCC;
+}
+
+.youb {
+    font-size: 25rpx;
+    color: rgb(173, 171, 171)
+}
+
+.zz {
+    font-size: 28rpx;
+}
+
+.youb image {
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
+}
+
+.button {
+    width: 100%;
+
+
+}
+
+.ittme {
+    width: 172rpx;
+    height: 100%;
+    margin: 15rpx 0;
+    text-align: center;
+    display: inline-block
+}
+
+.ittme image {
+    width: 65rpx;
+    height: 65rpx;
+}
+
+.ittme view {
+    font-size: 28rpx;
+    color: #808080;
+}
+
+/* 实用工具 */
+.line {
+    position: relative;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    overflow: hidden;
+    font-size: 28rpx;
+    color: #808080;
+    border-bottom: 1rpx solid rgb(238, 236, 236);
+}
+
+.line>image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+    margin-right: 15rpx;
+}
+
+.cll {
+    border-bottom: 1rpx solid rgb(238, 236, 236);
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: black;
+}
+
+.business {
+    margin: 20rpx;
+    padding: 10rpx;
+    height: 120rpx;
+    background-color: white;
+    border-radius: 20rpx;
+}
+
+.fz {
+    width: 100%;
+    height: 100rpx;
+    margin-top: 5rpx;
+    border-radius: 20rpx;
+}
+
+
+.btn {
+    width: auto !important;
+    height: auto !important;
+    text-align: left !important;
+    font-size: 28rpx;
+    color: #808080;
+    font-weight: normal;
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 20rpx;
+    margin-left: -5rpx!important;
+}
+
+.btn>image {
+    width: 45rpx;
+    height: 45rpx;
+    vertical-align: middle;
+    margin-right: 15rpx;
+}
+
+.kkkkk{
+    width: 40rpx!important;
+    height: 40rpx!important;
+    margin-left: 5rpx;
+}
+.kkkkkk{
+    width: 40rpx!important;
+    height: 40rpx!important;
+}
+
+.login{
+    margin: auto;
+    margin-top: 400rpx;
+    width: 240rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background-color: #c85945;
+    color: white;
+    text-align: center;
+    border-radius: 10rpx;
+}

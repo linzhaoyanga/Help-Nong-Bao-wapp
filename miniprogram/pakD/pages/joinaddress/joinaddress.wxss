@@ -1,0 +1,128 @@
+/* pages/individual/individual.wxss */
+page {
+    background-color: white;
+}
+
+.box {
+    margin-top: 30rpx;
+    margin-bottom: 50rpx;
+    padding-bottom: 80rpx;
+    border-bottom: 1rpx solid rgb(243, 242, 242);
+}
+
+.a {
+    display: flex;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    font-size: 28rpx;
+    color: #000;
+}
+
+.a>view {
+    width: 120rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-left: 20rpx;
+}
+
+.a input {
+    width: 560rpx;
+    height: 90rpx;
+    margin-top: 5rpx;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+    background-color: #f7f7f7;
+}
+
+
+
+.choose-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picker-text {
+    width: 560rpx;
+    height: 90rpx;
+    margin-top: 5rpx;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+    background-color: #f7f7f7;
+    color: #acb6bf;
+}
+
+.arrow-down {
+    width: 30rpx;
+}
+
+.p-style {
+    color: #acb6bf;
+}
+
+.detail-address {
+    width: 560rpx;
+    height: 120rpx;
+    margin-top: 5rpx;
+    margin-left: 140rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+    padding-top: 20rpx;
+    font-size: 28rpx;
+    background-color: #f7f7f7;
+}
+
+
+
+.btn-area {
+    position: fixed;
+    bottom: 30rpx;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+}
+
+.btn-area .save {
+    display: inline-block;
+    width: 600rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    background-color: #53b175;
+    color: white;
+}
+
+.btn-area .move{
+    display: inline-block;
+    width: 600rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 24rpx;
+    border-radius: 8rpx;
+    background-color: transparent;
+    color: rgb(180, 180, 180);
+}
+
+.active {
+    color: #000 !important;
+}
+
+.default-address{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+.kkkkkk{
+    margin-top: 400rpx;
+    text-align: center;
+}

@@ -1,0 +1,237 @@
+@import "../../wxParse/wxParse.wxss";
+page{
+    background-color: white;
+}
+.container{
+    width: 100%;
+}
+.container .content{
+    width: 90%;
+    margin: auto;
+    margin-top: 20rpx;
+    height: auto;
+}
+
+.container .content .word-info{
+    width: 100%;
+}
+
+.container .content .word-info .title{
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+    font-size: 36rpx;
+    font-weight: 600;
+}
+
+.container .content .word-info .tab{
+    display: flex;
+    font-size: 24rpx;
+    color: #a8a8a8;
+}
+
+.container .content .word-info .tab .type{
+    width: auto;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    background-color: #f6f6f6;
+    border-radius: 8rpx;
+    color: #4a6e4d;
+}
+
+.container .content .word-info .tab .name{
+    width: auto;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin: auto 20rpx;
+}
+
+.container .content .word-info .tab .time{
+    width: auto;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.container .content .word-info .artice{
+    text-indent: 2em;
+}
+
+.container .content .bot{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+}
+
+.container .content .bot .read{
+    font-size: 24rpx;
+    color: #a8a8a8;
+}
+
+.container .content .bot .support{
+    display: flex;
+
+}
+
+.container .content .bot .support image{
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 10rpx;
+    margin-top: 32rpx;
+}
+
+.container .comment{
+    border-top: 10rpx solid #f2f2f2;
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.container .comment .header{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    margin-left: 5%;
+    color: #000;
+    font-size: 36rpx;
+}
+
+.container .comment .content{
+    margin-left: 5%;
+}
+
+.container .comment .content .comments{
+    width: 100%;
+    height: auto;
+}
+.container .comment .content .comments li{
+    width: 100%;
+    height:auto;
+}
+
+.container .comment .content .comments li .top {
+    display: flex;
+    justify-content:baseline;
+    margin-top: 20rpx;
+}
+
+.container .comment .content .comments li .top image{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    border: 1rpx solid rgb(236, 236, 236);
+}
+
+.container .comment .content .comments li .top image:hover{
+    opacity: 0.8;
+}
+
+.container .comment .content .comments li .top .name{
+    color: rgb(90, 90, 90);
+    font-size: 28rpx;
+    margin-left: 20rpx;
+    margin-top: 10rpx;
+}
+
+.container .comment .content .comments li .middle{
+    padding-left: 70rpx;
+    padding-right: 60rpx;
+    font-size: 28rpx;
+    text-align: left;
+    line-height: 40rpx;
+    margin-top: 10rpx;
+}
+
+.container .comment .content .comments li .bot{
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 1rpx solid rgb(240, 235, 235);
+}
+
+.container .comment .content .comments li .bot .time{
+    font-size: 20rpx;
+    color:#ccc;
+    padding-left: 70rpx;
+}
+
+.container .comment .content .comments li .bot .heart image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.container .comment .content .comments li .bot .heart .num{
+    font-size: 24rpx;
+    padding-left: 5rpx;
+    padding-right: 5rpx;
+} 
+
+.container .speak{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    margin-left: 5%;
+    height: 100rpx;
+    padding-top: 20rpx;
+    background-color: white;
+    z-index: 99999;
+}
+
+.container .speak .input{
+    width: 560rpx;
+    height: 80rpx;
+    border-radius: 8rpx;
+    background-color: #f7f7f7;
+    padding-left: 20rpx;
+    font-size: 28rpx;
+}
+
+.container .speak .send{
+    width: 100rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    margin-right: 40rpx;
+    font-size: 28rpx;
+    border-radius: 8rpx;
+    color: white;
+    background-color: #53b175;
+}
+
+
+.comment-empty{
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+    font-size: 28rpx;
+    margin-bottom: 50px;
+}
+
+.comment-empty .empty-image{
+    width: 250rpx;
+    height: 250rpx;
+    margin-top: 100rpx;
+    margin-bottom: 40rpx;
+}
+
+.bot-toast{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}
+
+.bot-loading{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 400rpx;
+    margin-bottom: 30rpx;
+    border-radius: 10rpx;
+    color: #ccc;
+}

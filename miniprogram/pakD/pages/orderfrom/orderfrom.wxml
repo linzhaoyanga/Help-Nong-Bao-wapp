@@ -1,0 +1,63 @@
+<view class="containr">
+    <view data-index="0" class="{{aa == 0 ? 'containername active' : 'containername'}}" bindtap="index">待发货</view>
+    <view data-index="1" class="{{aa == 1 ? 'containername active' : 'containername'}}" bindtap="index">待收货</view>
+    <view data-index="2" class="{{aa == 2 ? 'containername active' : 'containername'}}" bindtap="index">退款/退货</view>
+    <view data-index="3" class="{{aa == 3 ? 'containername active' : 'containername'}}" bindtap="index">已完成</view>
+</view>
+<view class="kkkk">
+    <view class="list" wx:for="{{list}}" wx:key="index">
+        <view class="top">
+            <view class="left">
+                <view>购买者：</view>
+                <view>{{item.username}}</view>
+            </view>
+            <view class="right">
+                <view wx:if="{{aa == 0}}">{{item.isExit && !item.isExitOrder?'用户发起取消订单请求是否确认':''}}{{item.isExit && item.isExitOrder?'订单已经关闭':''}}{{
+                    !item.isExit && !item.isExitOrder?'所有商品发货后，可进行确认':''
+                    }}</view>
+                <view wx:elif="{{aa == 1}}">发货成功 待收货</view>
+                <view wx:elif="{{aa == 2}}">
+                {{item.isExitGood && !item.isExitG ?'用户发起退货请求是否确认':''}}
+                {{item.isExitMoney && !item.isExitM?'用户发起退款请求是否确认':''}}
+                {{item.isExitGood && item.isExitG ?'用户退货请求已确认':''}}
+                {{item.isExitMoney && item.isExitM?'用户退款请求已确认':''}}
+                </view>
+                <view wx:elif="{{aa == 3}}">已完结
+                </view>
+            </view>
+        </view>
+        <view class="middle" wx:for="{{item.goods}}" wx:for-index="i" wx:for-item="good" wx:key="{{i}}">
+            <view class="left">
+                <image src="{{good.img}}" mode="aspectFill"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{good.title}}</view>
+                <view class="price">￥{{good.price}}</view>
+                <view class="num">X {{good.num}}</view>
+            </view>
+            <view class="btnk" bindtap="goHair" data-id="{{item._id}}" data-type="1" data-goodid="{{good.id}}" wx:if="{{aa == 0 && !item.isExit && !item.isExitOrder}}">{{!good.isSend? '去发货':'已发货'}} </view>
+            <view class="btnk" wx:elif="{{aa == 1}}">{{!good.userIsUse? '待收货':'已收货'}} </view>
+        </view>
+        <view class="total">
+            <view class="header">总计</view>
+            <view class="t">
+                <view class="total-num">总数：{{item.goodsNum}}</view>
+                <view class="total-price">总价：￥{{item.totalPrice}}</view>
+            </view>
+            <view class="header">收货地址</view>
+            <view class="b">
+                <view class="address">{{item.address.easyAddress[0]}} {{item.address.easyAddress[1]}} {{item.address.easyAddress[2]}} {{item.address.detailAddress}}</view>
+                <view class="user">{{item.address.phone}} {{item.address.username}}</view>
+            </view>
+        </view>
+        <view class="bot">
+            <view class="time">下单时间: {{item.createTime}}</view>
+            <view class="go" bindtap="sureSend" data-id="{{item._id}}" data-type="1" data-index="{{index}}" wx:if="{{aa == 0 && !item.isExit}}">确认</view>
+            <view class="go" bindtap="sureSend" data-id="{{item._id}}" data-type="3" data-index="{{index}}" wx:elif="{{aa == 0 && !item.isExit}}">确认</view>
+            <view class="go" bindtap="sureSend" data-id="{{item._id}}" data-type="4" data-index="{{index}}" data-jk="{{item.isExitGood? '1':'2'}}" wx:elif="{{(item.isExitGood && !item.isExitG) || (item.isExitMoney && !item.isExitM)}}" >确认</view>
+            <view class="go" wx:elif="{{aa == 3}}">已完结</view>
+        </view>
+    </view>
+    <view class="bot-loading" wx:if="{{isLoading}}">加载中...</view>
+    <view class="bot-toast" wx:if="{{isToast && !isLoading}}">{{aa==0? '无待发货商品订单哦':''}} {{aa==1?'无待收货商品哦':''}} {{aa==2?'无待退款/退货商品哦':''}} {{aa==3?'无已完成商品哦':''}} </view>
+</view>

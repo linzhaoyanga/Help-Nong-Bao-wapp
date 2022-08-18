@@ -1,0 +1,102 @@
+<wxs src="../../../utils/filter/format.wxs" module="tool" />
+<view class="top">
+    <view wx:for="{{tablist}}" wx:key="index" bindtap="index" data-index="{{index}}" class="{{index == tyindex? 'list tab-active': 'list'}}">
+        <image src="{{item.imgurl}}"></image>
+        <view class="wz">{{item.name}}</view>
+    </view>
+</view>
+<!-- 消息部分 -->
+<view class="box2">
+    <!-- 消息列表 -->
+    <block wx:if="{{tyindex==0}}">
+        <view class="collect" wx:for="{{xtInfo}}" wx:key="index">
+            <view class="top">
+                <view class="l" bindtap="goXt" data-obj="{{item}}">
+                    <view class="jk">{{item.type}}</view>
+                </view>
+                <view class="delete" bindtap="deleteXtNotice" data-id="{{item._id}}">
+                    <image src="../../images/delete.png"></image>
+                </view>
+            </view>
+            <view class="middle" bindtap="goXt" data-obj="{{item}}">
+                <view class="left">{{item.title}}</view>
+            </view>
+            <view class="bot" bindtap="goXt" data-obj="{{item}}"><text>{{item.time}}</text>
+            </view>
+        </view>
+    </block>
+    <!-- 点赞 -->
+    <block wx:if="{{tyindex==1}}">
+        <view class="collect" wx:for="{{supportInfoByPost}}" wx:key="index">
+            <view class="top">
+                <view class="l">
+                    <image src="{{item.userimg}}"></image>
+                    <view class="name">{{item.username}}</view>
+                </view>
+                <view class="delete" bindtap="deleteCollect" data-id="{{item._id}}" data-name="supportPost">
+                    <image src="../../images/delete.png"></image>
+                </view>
+            </view>
+            <view class="middle" bindtap="goPost" data-id="{{item.postId}}">
+                <view class="left">
+                    <view class="scc">
+                        点赞了你的帖子:
+                    </view>
+                    <view class="article-name" bindtap="goPost" data-id="{{item.postId}}">{{item.context}}</view>
+                </view>
+            </view>
+            <view class="bot" bindtap="goPost" data-id="{{item.postId}}"><text>{{tool.dateFormat(item.time)}}</text></view>
+        </view>
+        <view class="collect" wx:for="{{supportCommentInfoByPost}}" wx:key="index">
+            <view class="top">
+                <view class="l">
+                    <image src="{{item.userimg}}"></image>
+                    <view class="name">{{item.username}}</view>
+                </view>
+                <view class="delete" bindtap="deleteCollect" data-id="{{item._id}}" data-name="postCollectComment">
+                    <image src="../../images/delete.png"></image>
+                </view>
+            </view>
+            <view class="middle" bindtap="goPost" data-id="{{item.postId}}">
+                <view class="left">点赞你在帖子：<text class="article-name">{{item.context}}</text>的评论：<text class="aaaa">{{item.commentContext}}</text></view>
+            </view>
+            <view class="bot" bindtap="goPost" data-id="{{item.postId}}"><text>{{tool.dateFormat(item.createTime)}}</text></view>
+        </view>
+        <view class="collect" wx:for="{{supportCommentInfoByArticle}}" wx:key="index">
+            <view class="top">
+                <view class="l">
+                    <image src="{{item.userimg}}"></image>
+                    <view class="name">{{item.username}}</view>
+                </view>
+                <view class="delete" bindtap="deleteCollect" data-id="{{item._id}}" data-name="collectComment">
+                    <image src="../../images/delete.png"></image>
+                </view>
+            </view>
+            <view class="middle" bindtap="goArticle" data-id="{{item.articleId}}">
+                <view class="left">点赞你在文章：<text class="article-name">{{item.articleTitle}}</text>的评论：<text class="aaaa">{{item.commentContext}}</text></view>
+            </view>
+            <view class="bot" bindtap="goArticle" data-id="{{item.articleId}}"><text>{{item.createTime}}</text></view>
+        </view>
+    </block>
+    <!-- 评论 -->
+    <block wx:if="{{tyindex==2}}">
+        <view class="collect" wx:for="{{commentInfoByPost}}" wx:key="index">
+            <view class="top">
+                <view class="l">
+                    <image src="{{item.userimg}}"></image>
+                    <view class="name">{{item.username}}</view>
+                </view>
+                <view class="delete" bindtap="deleteComment" data-id="{{item._id}}">
+                    <image src="../../images/delete.png"></image>
+                </view>
+            </view>
+            <view class="middle" bindtap="goPost" data-id="{{item.postId}}">
+                <view class="left">在你的帖子：<text class="article-name">{{item.postTitle}}</text>留下了评论：<text class="aaaa">{{item.context}}</text></view>
+            </view>
+            <view class="bot" bindtap="goPost" data-id="{{item.postId}}"><text>{{tool.dateFormat(item.createTime)}}</text></view>
+        </view>
+    </block>
+</view>
+<view class="empty-message" wx:if="{{tyindex == emptyIndex && flog}}">
+    <image src="../../images/message-empty.png"></image>
+</view>

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText":"农友圈",
+    "backgroundColor": "#F4F5F7",
+    "backgroundTextStyle":"dark",
+    "usingComponents": {},
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+}

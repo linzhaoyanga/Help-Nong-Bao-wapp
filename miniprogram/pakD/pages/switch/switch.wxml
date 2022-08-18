@@ -1,0 +1,68 @@
+<view wx:if="{{typess == 1}}">
+    <view class="containeres">
+    <input class="input" placeholder="产品标题 如苹果五斤" model:value="{{title}}" type="text" maxlength="40"></input>
+    <textarea confirm-type="text" class="weui" model:value="{{content}}" maxlength="-1" focus="true" placeholder="产品描述：品牌型号，商品渠道，商品质量" bindblur="bindTextAreaBlur"></textarea>
+    <view class="list-img">
+        <view wx:for="{{imgs}}" wx:key="index" class="tt">
+            <image class="imgurl" src="{{item}}" ></image>
+            <view class="ico" bindtap="deleteImg" data-index="{{index}}">
+                <image src="../../images/delete-img.png" mode="aspectFill"></image>
+            </view>
+        </view>
+        <image class="upimg" bindtap="uniimg" src="{{imgurl}}"></image>
+    </view>
+
+    <view class="list">
+        <view class="list-name">分类</view>
+        <view class="list-view">
+            <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" bindtap="classification">
+                <view wx:for="{{types}}" bindtap="changeTab" data-id="{{index}}" data-index="{{index}}" wx:key="index" class="{{index == typeIndex ? 'list-view-name-tow':'list-view-name'}}">{{item}}</view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="list-name">数量:</view><input type="number" class="list-input" placeholder="0" model:value="{{num}}" />
+    </view>
+
+    <view class="list">
+        <view class="list-name">价格:</view><input type="digit" class="list-input" placeholder="0.00" model:value="{{price}}" />
+    </view>
+
+    <view class="list">
+        <view class="list-name">原价:</view><input type="digit" class="list-input" placeholder="0.00" model:value="{{originalPrice}}" />
+    </view>
+    <view class="list c">
+        <view class="list-name-address">发货地址:</view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" class="picker-input">
+            <view class="choose-item">
+                <view class="picker-text">{{region[0]}} {{region[1]}} {{region[2]}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class="cccaaa">
+        <view bindtap="freight" class="list-tow">
+            <view class="list-name-tow">设置运费:</view>
+            <view>{{type}}</view>
+        </view>
+        <view wx:if="{{type == '正常运费模板'}}">
+            <view class="list-tow">
+                <view class="list-name-tow">运费价格:</view><input type="digit" class="list-input-tow" placeholder="￥0.00" model:value="{{freight}}" />
+            </view>
+        </view>
+        <view wx:if="{{type == '偏远地区模板'}}">
+            <view class="list-tow">
+                <view class="list-name-tow">正常运费:</view><input type="digit" class="list-input-tow" placeholder="￥0.00" model:value="{{normal}}" />
+            </view>
+            <view class="list-tow">
+                <view class="list-name-tow">偏远运费:</view><input type="digit" class="list-input-tow" placeholder="￥0.00" model:value="{{remote}}" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="publish" bindtap="publish">
+    <view>发布商品</view>
+</view>
+</view>
+<view wx:if="{{typess == 2}}" class="kkkkkk">
+此页面正在开发中</view>

@@ -1,0 +1,21 @@
+<scroll-view scroll-y class="container" show-scrollbar="{{false}}" enhanced wx:if="{{address.length > 0}}">
+    <view class="box" wx:for="{{address}}" wx:key="index">
+        <view class="default" wx:if="{{item.flog}}">
+            <view>默认地址</view>
+        </view>
+        <view class="bot">
+            <view class="left" bindtap="chooseAddress" data-id="{{item._id}}">
+                <view class="address">{{item.easyAddress[0]}} {{item.easyAddress[1]}} {{item.easyAddress[2]}} {{item.detailAddress}}</view>
+                <view class="name">{{item.username}} {{item.phone}}</view>
+            </view>
+            <view class="right" bindtap="updateAddresss" data-id="{{item._id}}">
+                <image src="../../images/address-update.png"></image>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view wx:if="{{address.length == 0 && isShow}}" class="empty-address">
+    <image src="../../images/address-empty.png"></image>
+    <view>你还没有添加收货地址哦！</view>
+</view>
+<view bindtap="addaddress" class="addaddress-name">添加新地址</view>

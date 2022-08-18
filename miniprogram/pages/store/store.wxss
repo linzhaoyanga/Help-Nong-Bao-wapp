@@ -1,0 +1,220 @@
+page {
+    /* background-color: #f5f8fd; */
+    background-color: #f4f4f7;
+}
+
+/* 搜索 */
+.box {
+    position: fixed;
+    top: -5rpx;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25rpx 0 6rpx 0;
+    background-color: white;
+    z-index: 999;
+}
+
+.inpp {
+    width: 560rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    background-color: #f7f7f7;
+    margin-left: 30rpx;
+    margin-bottom: 20rpx;
+    vertical-align: top;
+}
+
+.inp {
+    display: inline-block;
+    font-size: 24rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.ss {
+    width: 30rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-bottom: 24rpx;
+    margin-left: 30rpx;
+    margin-right: 20rpx;
+}
+
+.cart {
+    position: relative;
+    margin-right: 20rpx;
+}
+
+.cart image {
+    width: 56rpx;
+    height: 56rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+}
+
+.cart .num {
+    position: absolute;
+    top: 5rpx;
+    right: 5rpx;
+    padding: 4rpx 11rpx;
+    font-size: 24rpx;
+    border-radius: 50%;
+    color: white;
+    background-color: #c85945;
+    text-align: center;
+}
+
+/* 列表 */
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: white;
+    padding-top: 20rpx;
+    margin-top: 100rpx;
+}
+
+.top .tab {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200rpx;
+    height: 160rpx;
+}
+
+.top .tab image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    border: 4rpx solid #e5e5e5;
+}
+
+.top .tab .text {
+    color: #808080;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}
+
+
+.button {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-left: 8rpx;
+    margin-bottom: 50rpx;
+    margin-top: 10rpx;
+}
+
+.xhz {
+    position: relative;
+    width:44%;
+    height: auto;
+    margin: 10rpx;
+    padding: 9rpx;
+    padding-bottom: 20rpx;
+    border: 1rpx solid #e2e2e2;
+    border-radius: 40rpx;
+    overflow: hidden;
+    display: inline-block;
+    background-color: white;
+}
+
+.xhz image {
+    width: 100%;
+    height: 280rpx;
+    margin-bottom: 10rpx;
+    border-radius: 30rpx;
+}
+
+.xhz image:hover {
+    opacity: 0.8;
+}
+.no-good{
+    position: absolute;
+    top:120rpx;
+    left: 70rpx;
+    width: 200rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: white;
+    text-align: center;
+    font-size: 28rpx;
+    background-color: #141613;
+    opacity: 0.6;
+    border-radius: 10rpx;
+}
+
+.text {
+    width: auto;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.he {
+    width: 100%;
+    color: #000;
+    height: 80rpx;
+    font-size: 28rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.sales {
+    margin-top: 10rpx;
+    margin-bottom: 25rpx;
+    color: #a6a6a6;
+    font-size: 20rpx;
+}
+
+.text .bot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text .bot .price {
+    color: #c85945;
+    font-size: 28rpx;
+}
+
+.text .bot .add {
+    width: 120rpx;
+    height: auto;
+    text-align: right;
+}
+
+.text .bot .add image {
+    width: 64rpx;
+    height: 53rpx;
+
+}
+
+.empty-good {
+    margin: auto;
+    margin-top: 120rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #ccc;
+}
+
+.empty-good image {
+    width: 250rpx;
+    height: 250rpx;
+}
+
+.bot-toast {
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 0rpx;
+    margin-bottom: 140rpx;
+    color: #ccc;
+}
+.kkkkkk{
+    margin-top: 400rpx;
+    text-align: center;
+}

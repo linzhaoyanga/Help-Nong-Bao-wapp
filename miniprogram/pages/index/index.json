@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText":"农产道",
+    "backgroundColor": "#88da8f",
+    "backgroundTextStyle":"light",
+    "usingComponents": {},
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+}

@@ -1,0 +1,27 @@
+<view wx:if="{{typess == 1}}">
+    <view class="container">
+        <view class="input-context">
+            <textarea name="" id="" cols="30" rows="12" placeholder="今天的植物怎么样？" placeholder-class="plce" model:value="{{context}}"  maxlength="-1">
+    </textarea>
+        </view>
+        <view class="imgs">
+            <view class="list">
+                <view class="img" wx:for="{{imgs}}" wx:key="index">
+                    <image src="{{item}}" bindtap="priviewImg" data-src="{{item}}" mode="aspectFill"></image>
+                    <view class="move" bindtap="deleteImg" data-index="{{index}}">
+                        <image src="../../images/push-move.png"></image>
+                    </view>
+                </view>
+                <view class="add" wx:if="{{imgs.length != 9}}" bindtap="uploadimg">
+                    <image src="../../images/push-add.png"></image>
+                </view>
+            </view>
+            <!-- //超过九个自动隐藏 -->
+        </view>
+        <view class="push" bindtap="push">发布</view>
+    </view>
+</view>
+
+<view wx:if="{{type == 2}}">
+    此页面正在开发中
+</view>

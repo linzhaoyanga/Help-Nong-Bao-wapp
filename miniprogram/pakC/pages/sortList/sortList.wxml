@@ -1,0 +1,32 @@
+<!-- 列表 -->
+<view wx:if="{{typess == 1}}">
+    <view class="top">
+        <view class="tab" wx:for="{{tabList}}" wx:key="index" bindtap="goClassify" data-index="{{index}}">
+            <image src="{{item.img}}" mode="aspectFill"></image>
+            <view class="text">{{item.text}}</view>
+        </view>
+    </view>
+    <view class="button">
+        <view class="xhz" wx:for="{{goods}}" wx:key="index">
+            <image src="{{item.imgs[0]}}" bindtap="gotolist" data-id="{{item._id}}" mode="scaleToFill"></image>
+            <view class="text">
+                <view class="he" bindtap="gotolist" data-id="{{item._id}}">{{item.title}}</view>
+                <view class="sales">{{item.buyVolume}}人买过</view>
+                <view class="bot">
+                    <view class="price">￥{{item.price}}</view>
+                    <view class="add" bindtap="joinCart" data-index="{{index}}">
+                        <image src="../../../images/store-good-add.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="no-good" wx:if="{{item.num == 0}}">暂时无货</view>
+        </view>
+    </view>
+    <view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+    <view class="bot-toast" wx:if="{{isToast && !isLoading}}">— 没有更多商品了 —</view>
+    <view class="empty-good" wx:if="{{flog}}">
+        本栏目暂时还没有商品
+    </view>
+</view>
+<view wx:if="{{typess == 2}}" class="kkkkkk">
+    此页面正在开发中</view>

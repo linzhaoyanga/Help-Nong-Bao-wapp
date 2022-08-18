@@ -1,0 +1,95 @@
+<view wx:if="{{typess == 1}}">
+    <wxs src="../../utils/filter/format.wxs" module="tool" />
+    <view class="container">
+        <view class="ranking-list">
+            <view class="search-view" bindtap="goSearch">
+                <image src="../../images/sosuo.png"></image>
+                <input class="search" disabled="true" type="text" placeholder="搜索你感兴趣的贴子吧" placeholder-class="plac-input" />
+            </view>
+            <view class="ranking-view">
+                <view class="ranking" wx:for="{{rankings}}" wx:key="index" bindtap="goPost" data-id="{{item._id}}">
+                    <view class="left">
+                        <image class="imgggg" src="../../images/{{index + 1}}.png"></image>
+                        <view class="title">{{item.context}}</view>
+                    </view>
+                    <view class="support">{{item.supportVolume}}点赞</view>
+                </view>
+            </view>
+        </view>
+        <!-- 帖子 -->
+        <view class="article-view" wx:for="{{posts}}" wx:key="index">
+            <view class="top" bindtap="goPost" data-id="{{item._id}}">
+                <view class="user">
+                    <image class="pic" src="{{item.userimg}}"></image>
+                    <view class="name">{{item.username}}</view>
+                </view>
+                <view class="time">{{tool.dateFormat(item.time)}}</view>
+            </view>
+            <view class="middle" bindtap="goPost" data-id="{{item._id}}">
+                <view class="context">{{item.context}}</view>
+                <view class="imgs">
+                    <!-- bindtap="priviewImg" -->
+                    <image wx:for="{{item.imgs}}" mode="aspectFill" wx:for-item="img" wx:key="index" wx:for-index="i" src="{{img}}" class="{{item.imgs.length == 1?'k':'sc'}}" data-index="{{index}}" data-i="{{i}}" wx:if="{{i <= 5}}"></image>
+                    <view class="num" wx:if="{{item.imgs.length > 6}}">
+                        +{{item.imgs.length - 6}}
+                    </view>
+                </view>
+            </view>
+            <view class="bot">
+                <view class="card">
+                    <button open-type="share" hover-class="none" class="share" data-id="{{item._id}}" data-index="{{index}}">
+                        <image src="../../images/share.png"></image>
+                    </button>
+                    <view wx:if="{{item.shareVolume > 0}}">{{item.shareVolume}}</view>
+                </view>
+                <view class="card">
+                    <image src="../../images/comment.png" bindtap="goPost" data-id="{{item._id}}"></image>
+                    <view wx:if="{{item.commentVolume > 0}}">{{item.commentVolume}}</view>
+                </view>
+                <view class="card">
+                    <image src="{{item.isSupport ? '../../images/support-active.png':'../../images/support.png'}}" bindtap="supportPost" data-id="{{item._id}}" data-index="{{index}}"></image>
+                    <view wx:if="{{item.supportVolume > 0}}">{{item.supportVolume}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+        <view class="bot-toast" wx:if="{{isToast && !isLoading}}">— 没有了 —</view>
+    </view>
+    <view class="right-tab">
+        <view class="tab" bindtap="goPush">
+            <image src="../../images/community-create.png"></image>
+            <view>发帖</view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{typess == 2}}">
+    <view class="article-view" wx:for="{{posts}}" wx:key="index">
+        <view class="middle" bindtap="goPost" data-id="{{item._id}}">
+            <view class="context">{{item.context}}</view>
+            <view class="imgs">
+                <!-- bindtap="priviewImg" -->
+                <image wx:for="{{item.imgs}}" mode="aspectFill" wx:for-item="img" wx:key="index" wx:for-index="i" src="{{img}}" class="{{item.imgs.length == 1?'k':'sc'}}" data-index="{{index}}" data-i="{{i}}" wx:if="{{i <= 5}}"></image>
+                <view class="num" wx:if="{{item.imgs.length > 6}}">+{{item.imgs.length - 6}}</view>
+            </view>
+        </view>
+        <view class="bot">
+            <view class="card">
+                <button open-type="share" hover-class="none" class="share" data-id="{{item._id}}" data-index="{{index}}">
+                    <image src="../../images/share.png"></image>
+                </button>
+                <view wx:if="{{item.shareVolume > 0}}">{{item.shareVolume}}</view>
+            </view>
+            <view class="card">
+                <image src="../../images/comment.png" bindtap="goPost" data-id="{{item._id}}"></image>
+                <view wx:if="{{item.commentVolume > 0}}">{{item.commentVolume}}</view>
+            </view>
+            <view class="card">
+                <image src="{{item.isSupport ? '../../images/support-active.png':'../../images/support.png'}}" bindtap="supportPost" data-id="{{item._id}}" data-index="{{index}}"></image>
+                <view wx:if="{{item.supportVolume > 0}}">{{item.supportVolume}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+    <view class="bot-toast" wx:if="{{isToast && !isLoading}}">— 没有了 —</view>
+    <view class="bot-toast kkkkkk" wx:if="{{posts.length == 0 && !isLoading}}"> 暂时没有信息</view>
+</view>

@@ -1,0 +1,59 @@
+<!--pakA/pages/management/management.wxml-->
+<view class="ccc">
+    <view data-index="0" bindtap="navSwitch" class="{{index == 0 ? 'ccb':'cca'}}">待审核</view>
+    <view data-index="1" bindtap="navSwitch" class="{{index == 1 ? 'ccb':'cca'}}">未通过</view>
+    <view data-index="2" bindtap="navSwitch" class="{{index == 2 ? 'ccb':'cca'}}">已通过</view>
+</view>
+<view class="box">
+<!-- 待审核 2 -->
+<view wx:if="{{index == 0}}">
+    <view>
+        <view wx:for="{{list}}" wx:key="index">
+            <view wx:if="{{item.state == 2}}" class="aaa">
+                <view>{{item.title}}</view>
+                <view bindtap="aaa" data-id="{{item._id}}" class="top">
+                    <image src="{{item.coverPic}}" wx:if="{{item.coverPic != ''}}"></image>
+                    <view class="consto">{{item.coverText}}</view>
+                </view>
+                <view  class="bot">
+                    <view class="abc" data-id="{{item._id}}" bindtap="aab">通过</view>
+                    <view class="abc" data-id="{{item._id}}" bindtap="aac">不通过</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{index == 1}}">
+    <view>
+        <view wx:for="{{list}}" wx:key="index">
+            <view wx:if="{{item.state == 3}}" class="aaa">
+                <view class="title">{{item.title}}</view>
+                <view bindtap="aaa" data-id="{{item._id}}" class="top">
+                    <image src="{{item.coverPic}}" wx:if="{{item.coverPic != ''}}"></image>
+                    <view class="consto">{{item.coverText}}</view>
+                </view>
+                <view class="bot">
+                    <view class="abc" data-id="{{item._id}}" bindtap="aab">通过</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{index == 2}}">
+    <view>
+        <view wx:for="{{list}}" wx:key="index">
+            <view wx:if="{{item.state == 0}}" class="aaa">
+                <view class="title">{{item.title}}</view>
+                <view bindtap="aaa" data-id="{{item._id}}" class="top">
+                    <image src="{{item.coverPic}}" wx:if="{{item.coverPic != ''}}"></image>
+                    <view class="consto">{{item.coverText}}</view>
+                </view>
+                <view class="bot">
+                    <view class="abc" data-id="{{item._id}}" bindtap="aac">不通过</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

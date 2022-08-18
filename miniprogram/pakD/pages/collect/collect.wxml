@@ -1,0 +1,44 @@
+<wxs src="../../../utils/filter/format.wxs" module="tool" />
+<view class="container">
+    <view class="tab">
+        <view wx:for="{{tab}}" wx:key="index" bindtap="changeTab" data-index="{{index}}" class="{{tabIndex == index?'active':''}}">{{item}}</view>
+    </view>
+    <view class="content">
+        <view class="box" wx:if="{{tabIndex == 0}}">
+            <view class="box1" wx:for="{{articleList}}" wx:key="index" >
+                <view class="h1"><view class="left" bindtap="goArticle" data-id="{{item._id}}">{{item.title}}</view><view class="delete" bindtap="exitCollectArticle" data-id="{{item._id}}" data-index="{{index}}">取消收藏</view></view>
+                <view class="cl" bindtap="goArticle" data-id="{{item._id}}">{{item.coverText}}</view>
+                <view class="img" bindtap="goArticle" data-id="{{item._id}}">
+                    <image src="{{item.coverPic}}" mode="aspectFill"></image>
+                </view>
+            </view>
+        </view>
+        <view class="box" wx:if="{{tabIndex == 1}}">
+            <view class="article-view" wx:for="{{postList}}" wx:key="index">
+                <view class="top">
+                    <view class="user">
+                        <image class="pic" src="{{item.userimg}}"></image>
+                        <view class="name">{{item.username}}</view>
+                        <view class="delete" bindtap="exitCollectPost" data-id="{{item._id}}" data-index="{{index}}">取消收藏</view>
+                    </view>
+                    <view class="time">{{tool.dateFormat(item.time)}}</view>
+                </view>
+                <view class="middle" bindtap="goPost" data-id="{{item._id}}">
+                    <view class="context">{{item.context}}</view>
+                    <view class="imgs">
+                        <image wx:for="{{item.imgs}}" mode="aspectFill" wx:for-item="img" wx:key="index" wx:for-index="i" src="{{img}}" class="{{item.imgs.length == 1?'k':'sc'}}" data-index="{{index}}" data-i="{{i}}" wx:if="{{i <= 5}}"></image>
+                        <view class="num" wx:if="{{item.imgs.length > 6}}">+{{item.imgs.length - 6}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bot-toast" wx:if="{{isLoading}}">加载中...</view>
+    <view class="bot-toast" wx:if="{{isToast && !isLoading}}">— 没有了 —</view>
+    <view class="empty-article" wx:if="{{articleList.length == 0 && !isLoading && tabIndex == 0}}">
+        你还没有收藏文章哦
+    </view>
+    <view class="empty-article" wx:if="{{postList.length == 0 && !isLoading && tabIndex == 1}}">
+        你还没有收藏帖子哦
+    </view>
+</view>

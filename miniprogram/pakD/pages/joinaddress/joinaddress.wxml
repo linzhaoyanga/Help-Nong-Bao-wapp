@@ -1,0 +1,31 @@
+<view wx:if="{{typess==1}}">
+    <view class="box">
+        <view class="a">
+            <view> 姓名</view>
+            <input type="text" maxlength="16" placeholder="请输入用户姓名" placeholder-class="p-style" model:value="{{username}}" />
+        </view>
+        <view class="a">
+            <view> 电话</view>
+            <input type="number" placeholder="请输入电话" maxlength="11" placeholder-class="p-style" model:value="{{phone}}" />
+        </view>
+        <view class="a">
+            <view> 地址</view>
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" class="picker-input">
+                <view class="choose-item">
+                    <view class="{{region[2] != ''?'picker-text active': 'picker-text'}}">{{region[0]}} {{region[1]}} {{region[2]}}</view>
+                </view>
+            </picker>
+        </view>
+        <textarea class="detail-address" model:value="{{detailAddress}}" name="detailAddress" cols="30" rows="10" placeholder="详细地址，街、小区、单元、门牌号" placeholder-class="p-style"></textarea>
+    </view>
+    <view class="default-address">
+        <view>{{flog || k?"已设为默认地址":"设为默认地址"}}</view>
+        <radio checked="{{default}}" disabled="{{flog || k}}" color="#53b175" bindtap="torrgleChoose"></radio>
+    </view>
+    <view class="btn-area">
+        <view class="save" bindtap="{{addressId == ''? 'submit':'saveUpdateAddress'}}">保存</view>
+        <view class="move" bindtap="moveAddress" wx:if="{{addressId != ''}}">删除该地址</view>
+    </view>
+</view>
+<view wx:if="{{typess == 2}}" class="kkkkkk">
+    此页面正在开发中</view>

@@ -1,0 +1,194 @@
+
+
+.container {}
+
+.container .tab {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.container .tab view {
+    width: 48%;
+    text-align: center;
+}
+
+
+.container .content {
+    width: 100%;
+}
+
+.container .content .box {
+    width: 100%;
+}
+.container .content .box .box1 {
+    width: 700rpx;
+    padding: 15rpx;
+    margin: 20rpx auto;
+    background-color: white;
+    border-radius: 8rpx;
+}
+
+.container .content .box .box1 .h1 {
+    width: 100%;
+    margin: 10rpx 0;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container .content .box .box1 .h1 .left{
+    width: 560rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container .content .box .box1 .cl {
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(153, 153, 153);
+}
+
+.container .content .box .box1 .img image {
+    width: 100%;
+    height: 200rpx;
+    border-radius: 8rpx;
+}
+
+.container .content .box  .article-view{
+    width: auto;
+    height: auto;
+    margin: auto 10rpx;
+    background-color: white;
+    border-radius: 10rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    margin-top: 15rpx;
+    margin-bottom: 10rpx;
+}
+
+.container .content .box  .article-view .top{
+    width: auto;
+    padding: 10rpx;
+    padding-left: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .content .box .article-view .top .user{
+    display: flex;
+}
+
+
+.container .content .box .article-view .top .user image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 15rpx;
+    border-radius: 50%;
+}
+
+.container .content .box .article-view .top .user .name{
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+}
+
+.container .content .box .article-view .top .time{
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    color: #ccc;
+    margin-right: 20rpx;
+}
+
+.container .content .box .article-view .middle {
+    margin: 10rpx;
+    height: auto;
+}
+
+.container .content .box .article-view .middle .context{
+    margin: 12rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.container .content .box .article-view .middle .imgs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    position: relative;
+}
+
+.container .content .box .article-view .middle .imgs .k{
+    border-radius: 8rpx;
+}
+
+.container .content .box .article-view .middle .imgs .sc{
+    width: 200rpx;
+    height: 200rpx;
+    margin:12rpx;
+    border-radius: 8rpx;
+}
+
+.container .content .box .article-view .middle .imgs .num{
+    position: absolute;
+    bottom: 25rpx;
+    right: 60rpx;
+    width: 40rpx;
+    height: 40rpx;
+    line-height:40rpx;
+    padding-left: 8rpx;
+    padding-right: 8rpx;
+    text-align: center;
+    border-radius: 40rpx;
+    opacity: 0.6;
+    background-color: black;
+    color: white;
+    font-size: 24rpx;
+}
+
+.delete{
+    width: 120rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin-left: 20rpx;
+    border-radius: 8rpx;
+    font-size: 28rpx;
+    color: red;
+}
+.active {
+    border-bottom: 4rpx solid #000;
+}
+
+.bot-toast{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}
+
+.empty-article{
+    text-align: center;
+    color: #ccc;
+    margin-top: 400rpx;
+}

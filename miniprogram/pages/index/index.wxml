@@ -1,0 +1,36 @@
+<!-- 轮播图 -->
+<view class="banner" wx:if="{{!isPageLoading}}">
+    <view class="index-background"></view>
+    <swiper class="imageswiper" circular interval="3500" autoplay indicator-dots indicator-active-color="#6BB071" indicator-color="#ffffff">
+        <swiper-item class="item" wx:for="{{swiperList}}" wx:key="index">
+            <image src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<!-- 科普 -->
+<view class="box" wx:if="{{!isPageLoading}}">
+    <view class="liitem" wx:for="{{tabList}}" wx:key="index" bindtap="goClassfiy" data-index="{{index}}" data-name="{{item.text}}">
+        <image src="{{item.img}}"></image>
+        <view>{{item.text}}</view>
+    </view>
+</view>
+<view class="zixun" wx:if="{{!isPageLoading}}">
+    <text class="fl"></text>
+    <text class="zt">推荐</text>
+</view>
+<view class="container" wx:if="{{!isPageLoading}}">
+    <view class="nyzx" wx:for="{{zxList}}" wx:key="index">
+        <view class="left">
+            <image src="{{item.coverPic}}" bindtap="details" data-id="{{item._id}}" mode="aspectFill"></image>
+        </view>
+        <view class="right">
+            <view class="top" bindtap="details" data-id="{{item._id}}">{{item.title}}</view>
+            <view class="bot">
+                <view class="read" wx:if="{{item.readVolume > 0}}">{{item.readVolume}}人阅读</view>
+                <view class="time">{{item.createTime}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="bot-loading" wx:if="{{isLoading}}">加载中...</view>
+    <view class="bot-toast" wx:if="{{isToast}}">{{loadingText}}</view>
+</view>

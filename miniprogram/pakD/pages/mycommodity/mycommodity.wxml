@@ -1,0 +1,28 @@
+<view class="containr">
+    <view data-index="0" class="{{aa == 0 ? 'containername active' : 'containername'}}" bindtap="index">全部商品</view>
+    <view data-index="1" class="{{aa == 1 ? 'containername active' : 'containername'}}" bindtap="index">已上架</view>
+    <view data-index="2" class="{{aa == 2 ? 'containername active' : 'containername'}}" bindtap="index">已下架</view>
+</view>
+<view class="kkkk">
+    <view wx:for="{{list}}" wx:key="{{index}}" class="col">
+        <view class="top">{{item.state=='0'?'待审核':''}} {{item.state=='1'?'通过审核':''}} {{item.state=='2'?'未通过审核':''}} {{item.state=='3'?'已下架':''}}</view>
+        <view class="middle">
+            <view class="left" bindtap="goGood" data-id="{{item._id}}">
+                <image src="{{item.imgs[0]}}" mode="aspectFill"></image>
+            </view>
+            <view class="right">
+                <view>标题: {{item.title}}</view>
+                <view>描述: {{item.content}}</view>
+                <view>库存：{{item.num}}</view>
+            </view>
+        </view>
+        <view class="bot">
+            <view class="time">
+                {{item.createTime}}
+            </view>
+            <view class="xq" wx:if="{{item.state=='1'|| item.state=='3'}}" bindtap="goodReduce" data-state="{{item.state}}" data-id="{{item._id}}" data-index="{{index}}">{{item.state=='1'?'去下架':''}} {{item.state=='3'?'去上架':''}} </view>
+        </view>
+    </view>
+    <view class="bot-loading" wx:if="{{isLoading}}">加载中...</view>
+    <view class="bot-toast" wx:if="{{isToast && !isLoading}}">{{aa==0? '你还没有发布商品哦':''}} {{aa==1?'你还没有上架商品哦':''}} {{aa==2?'你还没有下架商品哦':''}} </view>
+</view>

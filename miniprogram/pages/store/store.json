@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText":"农资超市",
+    "backgroundColor": "#88da8f",
+    "backgroundTextStyle":"light",
+    "usingComponents": {},
+    "onReachBottomDistance": 50
+}

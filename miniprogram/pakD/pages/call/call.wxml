@@ -1,0 +1,5 @@
+<!--pages/call/call.wxml-->
+<view  class="box">
+  <button plain="true"  class="one"  bindtap="individual">个体商户</button>
+  <button  plain="true" class="one"  bindtap="enterprise">企业商户</button>
+</view>

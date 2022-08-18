@@ -1,0 +1,18 @@
+function dateFormat(jsondate){
+        var date = getDate(parseInt(jsondate, 10));
+        var Y = date.getFullYear() + '-';
+        var M = formatNumber(date.getMonth() + 1) + '-';
+        var D = formatNumber(date.getDate()) + ' ';
+        var h = formatNumber(date.getHours()) + ':';
+        var m = formatNumber(date.getMinutes());
+        // var s = formatNumber(date.getSeconds());
+        return Y + M + D + h + m; 
+}
+
+var formatNumber = function (n) {
+    return n >= 10 ? n : '0' + n
+}
+
+module.exports = {
+    dateFormat: dateFormat,
+}

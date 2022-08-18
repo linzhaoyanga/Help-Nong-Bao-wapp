@@ -1,0 +1,22 @@
+/* pages/call/call.wxss */
+page {
+  background-color: white;
+}
+
+.box {
+  margin: 333rpx auto;
+}
+
+.one:not([size='default']) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #53b175;
+  padding: 0rpx;
+  width: 375rpx;
+  height: 105rpx;
+  border: 1rpx solid white;
+  border-radius:10rpx;
+  color: white;
+  margin-bottom: 100rpx;
+}

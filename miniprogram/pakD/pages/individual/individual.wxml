@@ -1,0 +1,53 @@
+<view wx:if="{{typess == 1}}">
+    <view class="box">
+        <view class="a">
+            <view> 店铺名称</view>
+            <input type="text" maxlength="20" placeholder="请输入店铺名称" placeholder-class="p-style" model:value="{{storeName}}" />
+        </view>
+        <view class="a">
+            <view> 姓名</view>
+            <input type="text" placeholder="请输入你的姓名" placeholder-class="p-style" model:value="{{name}}" />
+        </view>
+        <view class="a">
+            <view> 电话</view>
+            <input type="number" placeholder="请输入你的电话号" maxlength="11" placeholder-class="p-style" model:value="{{phone}}" />
+        </view>
+        <view class="a">
+            <view> 微信号</view>
+            <input type="text" placeholder="请输入你的微信号" placeholder-class="p-style" model:value="{{wxNum}}" />
+        </view>
+        <view class="a">
+            <view> 身份证号</view>
+            <input type="idcard" placeholder="请输入你的身份证号码" placeholder-class="p-style" model:value="{{idCard}}" />
+        </view>
+        <view class="upload-license">
+            <view class="text">上传身份证正面照片</view>
+            <view class="img">
+                <image src="{{idCardz}}" wx:if="{{idCardz != ''}}" mode="aspectFill" bindtap="priviewImg" data-src="{{idCardz}}"></image>
+                <view class="upload" wx:if="{{idCardz == ''}}" bindtap="uploadimg" data-id="1">
+                    <image src="../../images/upload-img-license.png"></image>
+                </view>
+                <view class="delete" bindtap="deleteImg" data-id="1" wx:if="{{idCardz != ''}}">
+                    <image src="../../images/delete.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="upload-license">
+            <view class="text">上传身份证反面照片</view>
+            <view class="img">
+                <image src="{{idCardf}}" wx:if="{{idCardf != ''}}" mode="aspectFill" bindtap="priviewImg" data-src="{{idCardf}}"></image>
+                <view class="upload" wx:if="{{idCardf == ''}}" bindtap="uploadimg" data-id="2">
+                    <image src="../../images/upload-img-license.png"></image>
+                </view>
+                <view class="delete" bindtap="deleteImg" data-id="2" wx:if="{{idCardf != ''}}">
+                    <image src="../../images/delete.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btn-area">
+        <view class="btn" bindtap="submit">提交</view>
+    </view>
+</view>
+<view wx:if="{{typess == 2}}" class="kkkkkk">
+此页面正在开发中</view>

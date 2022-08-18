@@ -1,0 +1,169 @@
+/* pages/individual/individual.wxss */
+page {
+    background-color: white;
+}
+
+.box {
+    margin-top: 30rpx;
+    margin-bottom: 150rpx;
+}
+
+.a {
+    display: flex;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    font-size: 28rpx;
+    color: #000;
+}
+
+.a>view {
+    width: 160rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-left: 20rpx;
+}
+
+.a input {
+    width: 530rpx;
+    height: 90rpx;
+    margin-top: 5rpx;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+    background-color: #f7f7f7;
+}
+
+.choose-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picker-text {
+    width: 530rpx;
+    height: 90rpx;
+    margin-top: 5rpx;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+    background-color: #f7f7f7;
+    color: #acb6bf;
+}
+
+.arrow-down {
+    width: 30rpx;
+}
+
+.p-style {
+    color: #acb6bf;
+}
+
+.detail-address {
+    width: 530rpx;
+    height: 120rpx;
+    margin-top: 5rpx;
+    margin-left: 180rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+    padding-top: 20rpx;
+    font-size: 28rpx;
+    background-color: #f7f7f7;
+}
+
+.enterprise-synopsis {
+    width: 530rpx;
+    height: 180rpx;
+    line-height: 35rpx;
+    margin-top: 5rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+    padding-top: 20rpx;
+    background-color: #f7f7f7;
+}
+
+.upload-license {
+    display: flex;
+    margin-top: 130rpx;
+}
+
+.upload-license .text {
+    color: #000;
+    font-size: 28rpx;
+    margin-left: 10rpx;
+}
+
+.upload-license .img {
+    width: 300rpx;
+    height: 300rpx;
+    margin-left: 20rpx;
+    position: relative;
+}
+
+.upload-license .img .upload {
+    width: 300rpx;
+    height: 300rpx;
+    text-align: center;
+    border: 1rpx solid #707070;
+}
+
+.upload-license .img .upload>image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 110rpx;
+}
+
+.upload-license .img>image {
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 8rpx;
+}
+
+.upload-license .delete {
+    position: absolute;
+    top: 0;
+    right: -15rpx;
+    width: 60rpx;
+    height: 60rpx;
+    z-index: 888;
+}
+
+.upload-license .delete image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 15rpx;
+}
+
+.btn-area {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    background-color: white;
+    border-top: 1rpx solid #f7f7f7;
+    z-index: 9999 !important;
+}
+
+.btn-area .btn {
+    display: inline-block;
+    width: 360rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 8rpx;
+    background-color: #53b175;
+    color: white;
+}
+
+.active {
+    color: #000 !important;
+}
+.kkkkkk{
+    margin-top: 400rpx;
+    text-align: center;
+}

@@ -1,0 +1,61 @@
+<view class="container" wx:if="{{!isPageLoading}}">
+    <div class="content">
+        <view class="word-info">
+            <view class="text">
+                <view class="title">{{articleInfo.title}}</view>
+                <!-- <view class="tab">
+                    <view class="type">{{articleInfo.type}}</view>
+                    <view class="name">{{articleInfo.username}}</view>    
+                    <view class="time">{{articleInfo.createTime}}</view>    
+                </view> -->
+                <view class="artice">
+                    <import src="../../wxParse/wxParse.wxml" />
+                    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+                </view>
+            </view>
+        </view>
+        <view class="bot" >
+            <view class="read">{{articleInfo.readVolume == 0 ? '还未有人阅读':articleInfo.readVolume+'人阅读'}}</view>
+            <view class="support" wx:if="{{flog == 0}}">
+                <image src="../../images/{{!isSupport?'heart.png':'heart-active.png'}}" bindtap="supportArtice"></image>
+                <text>{{articleInfo.supportVolume}}</text>
+            </view>
+        </view>
+    </div>
+    <view class="comment">
+        <block wx:if="{{total> 0}}">
+            <view class="header">评论 · {{total}}</view>
+            <view class="content">
+                <ul class="comments">
+                    <li wx:for="{{comments}}" wx:key="index">
+                        <view class="top">
+                            <image src="{{item.userimg}}" bindtap="skipPage" data-id="{{item.userId}}"></image>
+                            <view class="name">{{item.username}}</view>
+                        </view>
+                        <view class="middle">
+                            <view class="text">{{item.context}}</view>
+                        </view>
+                        <view class="bot">
+                            <view class="time">{{item.createTime}}</view>
+                            <view class="heart" bindtap="supportComment" data-id="{{item._id}}">
+                                <image src="../../images/{{!item.isSupport?'support.png' : 'support-active.png'}}"></image>
+                                <text class="num">{{item.supportVolume}}</text>
+                            </view>
+                        </view>
+                    </li>
+                </ul>
+            </view>
+        </block>
+        <view class="bot-toast" wx:if="{{isToast}}">— 无更多评论 —</view>
+        <view wx:if="{{total<= 0}}" class="comment-empty">
+            <image src="../../images/comment-empty.png" class="empty-image"></image>
+            <view>评论为空，快来评论吧！</view>
+        </view>
+    </view>
+    <!-- 发言 -->
+    <view class="speak" wx:if="{{flog == 0 && typess == 1}}">
+        <input class="input" type="text" name="commentContext" placeholder="说点什么吧......" model:value="{{commentContext}}" />
+        <view class="send" bindtap="sendMessage">发表</view>
+    </view>
+</view>
+<view class="bot-loading" wx:if="{{isPageLoading}}">加载中...</view>

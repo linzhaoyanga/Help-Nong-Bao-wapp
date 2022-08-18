@@ -1,0 +1,103 @@
+.containr {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly;
+    background-color: white;
+    font-size: 28rpx;
+}
+
+.containername {
+    width: 240rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #000;
+    opacity: 0.8;
+}
+
+.active {
+    opacity: 1;
+    border-bottom: 4rpx solid #000;
+}
+.kkkk{
+    margin-top: 90rpx;
+}
+
+.col {
+    width: auto;
+    margin: auto 10rpx;
+    background-color: white;
+    margin-top: 20rpx;
+    padding: 20rpx;
+    border-radius: 8rpx;
+}
+
+.col .top {
+    text-align: right;
+    font-size: 28rpx;
+    color: red;
+}
+
+.col .middle {
+    display: flex;
+    width: 100%;
+}
+
+.col .middle .left image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.col .middle .right{
+    width: 100%;
+    margin-left: 20rpx;
+    font-size: 32rpx;
+}
+
+.col .middle .right view{
+    width: 500rpx;
+    margin-top: 20rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.col .bot{
+    display: flex;
+    justify-content:space-between;
+}
+
+.col .bot .time{
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    color: #ccc;
+}
+.col .bot .xq{
+    width: 120rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: white;
+    border-radius: 8rpx;
+    background-color: #c85945;
+}
+
+.bot-loading{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}
+
+.bot-toast{
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 400rpx;
+    margin-bottom: 30rpx;
+    color: #ccc;
+}

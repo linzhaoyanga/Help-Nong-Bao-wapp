@@ -1,0 +1,52 @@
+<scroll-view class="box" wx:if="{{!isPageLoading}}">
+    <view class="img">
+        <image src="{{goodInfo.imgs[0]}}" mode="aspectFill"></image>
+    </view>
+    <view class="xq">
+        <view class="tm">
+            <view class="price">￥{{goodInfo.price}}</view>
+        </view>
+        <view class="bt">
+            <view class="title">{{goodInfo.title}}</view>
+            <button open-type="share" class="share" hover-class="none">
+                <image src="../../images/good-share.png"></image>
+                <view>分享</view>
+            </button>
+        </view>
+        <view class="xh">
+            <view>销量 {{goodInfo.buyVolume}}</view>
+            <view>剩余 {{goodInfo.num}}</view>
+        </view>
+    </view>
+    <view class="tabkkk">
+        <!-- <view><text class="z">类型:</text> <text>{{types[goodInfo.goodType]}}</text></view> -->
+        <view><text class="z">配送</text> <text>快递发货</text></view>
+        <view wx:if="{{goodInfo.type==1}}">
+        <text class="z">运费</text><text>免运费</text></view>
+        <view wx:if="{{goodInfo.type==2}}"><text class="z">运费</text><text>{{goodInfo.freight}}元</text></view>
+        <view wx:if="{{goodInfo.type==3}}"><text class="z">正常运费</text><text>{{goodInfo.freight}}元</text></view>
+        <view wx:if="{{goodInfo.type==3}}"><text class="z">偏远运费</text><text>{{goodInfo.remote}}元</text></view>
+        <view><text class="z">发货地</text> <text>{{goodInfo.shippingAddress}}</text></view>
+    </view>
+    <view class="header">
+        商品详情
+    </view>
+    <view class="introduce">
+        {{goodInfo.content}}
+    </view>
+    <view class="imgs">
+        <image wx:for="{{goodInfo.imgs}}" src="{{item}}" wx:key="index" bindtap="priviewImg" data-index="{{index}}" mode="widthFix"></image>
+    </view>
+</scroll-view>
+<view class="btt" wx:if="{{!isPageLoading}}">
+    <view class="home" bindtap="goStore">
+        <image src="../../images/good-home.png"></image>
+    </view>
+    <view class="cart" bindtap="goCart">
+        <image src="../../images/good-cart.png"></image>
+        <text class="num" wx:if="{{num > 0}}">{{num}}</text>
+    </view>
+    <text class="gm" bindtap="joinCart">加入购物车</text><text class="gm" bindtap="goBuy">立即购买</text>
+</view>
+
+<view class="bot-loading" wx:if="{{isPageLoading}}">加载中...</view>

@@ -1,0 +1,26 @@
+page{
+  background-color: #f5f8fd;
+}
+
+.box{
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  background-color: white;
+}
+
+.box .title{
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-bottom: 100rpx;
+}
+
+.box .p{
+  height: 300rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  text-indent: 1em;
+  margin-bottom: 200rpx;
+}
