@@ -7,7 +7,7 @@
   </view>
   <view class="a">
     <view> 单位名称</view>
-    <input type="text" placeholder="请输入统一社会代码" placeholder-class="p-style" model:value="{{companyName}}"/>
+    <input type="text" placeholder="请输入统一单位名称" placeholder-class="p-style" model:value="{{companyName}}"/>
   </view>
   <view class="a">
     <view> 社会代码</view>

@@ -42,15 +42,12 @@
 <view wx:if="{{typess == 2}}">
     <view class="button">
         <view class="xhz" wx:for="{{goods}}" wx:key="index">
-            <image src="{{item.imgs[0]}}" bindtap="gotolist" data-id="{{item._id}}" mode="aspectFill"></image>
+            <image src="{{item.imgs[0]}}"  mode="aspectFill"></image>
             <view class="text">
                 <view class="he" bindtap="gotolist" data-id="{{item._id}}">{{item.title}}</view>
                 <view class="sales">{{item.buyVolume}}人买过</view>
                 <view class="bot">
                     <view class="price">￥{{item.price}}</view>
-                    <view class="add" bindtap="joinCart" data-index="{{index}}">
-                        <image src="../../images/store-good-add.png"></image>
-                    </view>
                 </view>
             </view>
             <view class="no-good" wx:if="{{item.num == 0}}">暂时无货</view>

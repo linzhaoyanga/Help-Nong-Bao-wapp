@@ -8,7 +8,7 @@
     </swiper>
 </view>
 <!-- 科普 -->
-<view class="box" wx:if="{{!isPageLoading}}">
+<view class="box" wx:if="{{!isPageLoading && typess != 2}}">
     <view class="liitem" wx:for="{{tabList}}" wx:key="index" bindtap="goClassfiy" data-index="{{index}}" data-name="{{item.text}}">
         <image src="{{item.img}}"></image>
         <view>{{item.text}}</view>

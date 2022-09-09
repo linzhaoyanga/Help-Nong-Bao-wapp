@@ -11,6 +11,7 @@ Page({
         swiperList: [],
         isToast: false,
         tabList:[],
+        typess: ""
     },
     details(event) {
         const dataset = event.currentTarget.dataset;
@@ -93,6 +94,7 @@ Page({
     },
     
     onLoad: function () {
+        this.changeMode();
         this.setData({
             'isPageLoading':true,
         })
@@ -109,6 +111,25 @@ Page({
             menus: ['shareAppMessage', 'shareTimeline'],
             success(res) {
                 console.log('showShareMenu', res);
+            }
+        })
+    },
+    changeMode() {
+        let that = this;
+        DB.collection("state").where({
+            json: 1
+        }).get({
+            success: (res) => {
+                if (res.data.length == 1) {
+                    this.setData({
+                        'typess': 1
+                    })
+                }
+                if (res.data.length == 2) {
+                    this.setData({
+                        'typess': 2
+                    })
+                }
             }
         })
     },
