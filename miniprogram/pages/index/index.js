@@ -11,7 +11,7 @@ Page({
         swiperList: [],
         isToast: false,
         tabList:[],
-        typess: ""
+        isHide: false
     },
     details(event) {
         const dataset = event.currentTarget.dataset;
@@ -94,10 +94,10 @@ Page({
     },
     
     onLoad: function () {
-        this.changeMode();
         this.setData({
             'isPageLoading':true,
         })
+        this.changeMode();
         this.obtainIndexTabs();
         this.getIndexSwiperList();
         this.getZxList();
@@ -110,35 +110,24 @@ Page({
             withShareTicket: true,
             menus: ['shareAppMessage', 'shareTimeline'],
             success(res) {
-                console.log('showShareMenu', res);
             }
         })
-    },
+    },    
     changeMode() {
-        let that = this;
+        const that = this;
         DB.collection("state").where({
-            json: 1
+            isHide: true
         }).get({
             success: (res) => {
                 if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
+                    that.setData({
+                        'isHide': true
                     })
                 }
             }
-        })
+        });
     },
     onShow: function () {
-        if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-            this.getTabBar().setData({
-                selected: 0
-            })
-        }
     },
     /**
      * 页面上拉触底事件的处理函数

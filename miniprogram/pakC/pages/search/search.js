@@ -51,7 +51,7 @@ Page({
                 'kkk': 1
             });
             var total = 0;
-            let res = await DB.collection('com').where({
+            let res = await DB.collection('goods').where({
                 title: DB.RegExp({
                     regexp: this.data.keyword,
                     options: 'i',
@@ -65,7 +65,7 @@ Page({
                 'pages': pages
             })
             let begin = (pageNum - 1) * num;
-            let ares = await DB.collection("com").where({
+            let ares = await DB.collection("goods").where({
                 title: DB.RegExp({
                     regexp: this.data.keyword,
                     options: 'i',

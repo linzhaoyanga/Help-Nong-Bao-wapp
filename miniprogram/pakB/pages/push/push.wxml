@@ -1,4 +1,4 @@
-<view wx:if="{{typess == 1}}">
+<view wx:if="{{!isHide}}">
     <view class="container">
         <view class="input-context">
             <textarea name="" id="" cols="30" rows="12" placeholder="今天的植物怎么样？" placeholder-class="plce" model:value="{{context}}"  maxlength="-1">
@@ -16,12 +16,12 @@
                     <image src="../../images/push-add.png"></image>
                 </view>
             </view>
-            <!-- //超过九个自动隐藏 -->
+            <!-- //超过九个隐藏 -->
         </view>
         <view class="push" bindtap="push">发布</view>
     </view>
 </view>
 
-<view wx:if="{{type == 2}}">
+<view wx:else>
     此页面正在开发中
 </view>

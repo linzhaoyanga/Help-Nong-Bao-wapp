@@ -1,12 +1,12 @@
 // pages/community/community.js
+const app = getApp();
+const DB = wx.cloud.database();
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"
 import {
     store
 } from "../../share/index.js"
-const app = getApp();
-const DB = wx.cloud.database();
 Page({
     data: {
         posts: [],
@@ -17,9 +17,9 @@ Page({
         rankings: [],
         flog: false,
         isToast: false,
-        typess: '',
+        isHide: false
     },
-    goSearch: function () {
+    goSearch() {
         wx.navigateTo({
             url: '../../pakB/pages/search/search',
         })
@@ -210,25 +210,6 @@ Page({
             })
         }
     },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
-    },
     onLoad(options) {
         this.storeBindings = createStoreBindings(this, {
             store,
@@ -242,20 +223,28 @@ Page({
             withShareTicket: true,
             menus: ['shareAppMessage', 'shareTimeline'],
             success(res) {
-                console.log('showShareMenu', res);
             }
         })
     },
     onReady() {
 
     },
+    changeMode() {
+        const that = this;
+        DB.collection("state").where({
+            isHide: true
+        }).get({
+            success: (res) => {
+                if (res.data.length == 1) {
+                    that.setData({
+                        'isHide': true
+                    })
+                }
+            }
+        });
+    },
     onShow() {
         this.unshiftPostToposts();
-        if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-            this.getTabBar().setData({
-                selected: 1
-            })
-        }
     },
 
     /**

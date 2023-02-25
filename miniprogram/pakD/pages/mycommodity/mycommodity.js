@@ -1,5 +1,5 @@
+const app = getApp();
 const DB = wx.cloud.database();
-const app = getApp()
 Page({
     data: {
         aa: 0,
@@ -38,7 +38,7 @@ Page({
                     state: state
                 }
             }
-            DB.collection("com").where(where).orderBy("createTime", "desc").get({
+            DB.collection("goods").where(where).orderBy("createTime", "desc").get({
                 success: (res) => {
                     this.setData({
                         list: res.data,
@@ -74,7 +74,7 @@ Page({
             } else if (state == 3) {
                 state = 1;
             }
-            DB.collection("com").where({
+            DB.collection("goods").where({
                 '_id': id,
             }).update({
                 data: {
@@ -88,7 +88,7 @@ Page({
                             showCancel: false,
                             confirmColor: '#497749',
                             duration: 1000,
-                            complete: (res) => {
+                            goodsplete: (res) => {
                                 this.data.list.splice(index,1);
                                 this.setData({
                                     'list':this.data.list

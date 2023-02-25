@@ -1,4 +1,4 @@
-const app = getApp()
+const app = getApp();
 const DB = wx.cloud.database();
 import {
     createStoreBindings
@@ -24,7 +24,7 @@ Page({
         isComment: false,
         k: false,
         isPageLoading: false,
-        typess: ""
+        isHide: app.globalData.isHide
     },
     onShareAppMessage() {
         wx.showShareMenu({
@@ -389,7 +389,6 @@ Page({
             store,
             fields: ['user']
         });
-        this.changeMode();
         this.setData({
             pageId: options.id,
             flog: options.flog,
@@ -403,25 +402,6 @@ Page({
                 'isPageLoading': false,
             })
         }, 200)
-    },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
     },
 
     onReady: function () {

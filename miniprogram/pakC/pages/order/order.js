@@ -1,12 +1,12 @@
 // pages/order/order.js
+const app = getApp();
+const DB = wx.cloud.database();
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"
 import {
     store
 } from "../../../share/index"
-const DB = wx.cloud.database();
-const app = getApp();
 Page({
     data: {
         openid: '',
@@ -133,11 +133,11 @@ Page({
                     success: (res) => {
                         let len = obj.goods.length;
                         for (let i = 0; i < obj.goods.length; i++) {
-                            DB.collection("com").where({
+                            DB.collection("goods").where({
                                 '_id': obj.goods[i].id
                             }).get({
                                 success: (eess) => {
-                                    DB.collection("com").where({
+                                    DB.collection("goods").where({
                                         '_id': obj.goods[i].id
                                     }).update({
                                         data: {

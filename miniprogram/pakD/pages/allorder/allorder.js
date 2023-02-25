@@ -1,6 +1,6 @@
 // pakA/pages/allorder/allorder.js
+const app = getApp();
 const DB = wx.cloud.database();
-const app = getApp()
 Page({
     data: {
         index: ['待发货', '待收货', '已完成', '退货/退款', ],

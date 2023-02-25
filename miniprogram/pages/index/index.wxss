@@ -175,6 +175,9 @@
 }
 
 .container .nyzx .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 6;
     height: 160rpx;
     margin: 20rpx;
@@ -183,7 +186,7 @@
 
 .container .nyzx .right .top {
     width: 100%;
-    height: 100rpx;
+    height: 80rpx;
     line-height: 40rpx;
     font-size: 28rpx;
     color: #000;
@@ -191,22 +194,19 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .container .nyzx .right .bot {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 80rpx;
-    line-height: 80rpx;
-    position: relative;
+    line-height: 1.5;
     color: #ccc;
     font-size: 20rpx;
 }
 
-.container .nyzx .right .bot .time {
-    position: absolute;
-    right: 10rpx;
-}
+
 
 .bot-toast{
     font-size: 24rpx;

@@ -1,11 +1,10 @@
-// pages/store/store.js
+const DB = wx.cloud.database();
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"
 import {
     store
 } from "../../share/index.js"
-const DB = wx.cloud.database();
 Page({
     data: {
         tabList: [
@@ -17,7 +16,7 @@ Page({
         pages: 0,
         isToast: false,
         flog: false,
-        typess: ""
+        isHide: false
     },
     goSearch() {
         wx.navigateTo({
@@ -62,7 +61,7 @@ Page({
                 'isLoading': true
             });
             var total = 0;
-            let res = await DB.collection('com').where({
+            let res = await DB.collection('goods').where({
                 state: 1,
             }).count();
             total = res.total;
@@ -72,7 +71,7 @@ Page({
                 'pages': pages
             })
             let begin = (pageNum - 1) * num;
-            let ares = await DB.collection("com").where({
+            let ares = await DB.collection("goods").where({
                 state: 1
             }).limit(num).skip(begin).get();
             this.setData({
@@ -125,25 +124,6 @@ Page({
             isExitMoney:false
         });
     },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
-    },
     onLoad(options) {
         this.storeBindings = createStoreBindings(this, {
             store,
@@ -154,16 +134,25 @@ Page({
         this.obtainStoreTabs();
         this.obtainGoodsPage();
     },
+    changeMode() {
+        const that = this;
+        DB.collection("state").where({
+            isHide: true
+        }).get({
+            success: (res) => {
+                if (res.data.length == 1) {
+                    that.setData({
+                        'isHide': true
+                    })
+                }
+            }
+        });
+    },
     onUnload() {
         this.storeBindings.destoryStoreBindings();
     },
     onReady() {},
     onShow: function () {
-        if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-            this.getTabBar().setData({
-                selected: 2
-            })
-        }
     },
     onReachBottom: function () {
         if (this.data.pageNum < this.data.pages) {

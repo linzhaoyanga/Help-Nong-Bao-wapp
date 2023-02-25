@@ -26,7 +26,7 @@ Page({
         k: false,
         isPageLoading: false,
         readArticleIds: [],
-        typess: ''
+        isHide: app.globalData.isHide
     },
    
     //根据页面参数获取文章相关信息
@@ -385,7 +385,6 @@ Page({
             store,
             fields: ['user']
         });
-        this.changeMode();
         this.setData({
             isPageLoading: true,
             pageId: options.id,
@@ -401,25 +400,6 @@ Page({
         }, 400);
         this.setData({
             'readArticleIds': JSON.parse(wx.getStorageSync('readArticleIds') || '[]')
-        })
-    },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
         })
     },
 

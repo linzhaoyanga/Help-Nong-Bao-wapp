@@ -1,19 +1,19 @@
 // pakB/pages/push/push.js
+const app = getApp();
+const DB = wx.cloud.database();
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"
 import {
     store
 } from "../../../share/index"
-const app = getApp();
-const DB = wx.cloud.database();
 Page({
     data: {
         context: '',
         imgs: [],
         isUpload: false,
         postId: '',
-        typess:'',
+        isHide: app.globalData.isHide
     },
     uploadimg() {
         if (this.data.isUpload) {
@@ -43,7 +43,7 @@ Page({
                     return
                 };
                 wx.cloud.uploadFile({
-                    cloudPath: 'posts/' + app.globalData.username + '/' + Math.floor(Math.random() * 1000000) + Date.now().toString(36) + '.png',
+                    cloudPath: 'posts/' + Math.floor(Math.random() * 1000000) + Date.now().toString(36) + '.png',
                     filePath: res.tempFilePaths[0],
                     success: (ress) => {
                         that.data.imgs.push(ress.fileID);
@@ -152,31 +152,11 @@ Page({
             fields: ['user'],
             actions: ['updatePostId',"returnUser"]
         });
-        this.changeMode();
         wx.showShareMenu({
             withShareTicket: true,
             menus: ['shareAppMessage', 'shareTimeline'],
             success(res) {
                 console.log('showShareMenu', res);
-            }
-        })
-    },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
             }
         })
     },

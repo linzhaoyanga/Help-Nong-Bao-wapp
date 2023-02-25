@@ -1,12 +1,12 @@
 // pages/my/my.js
+const app = getApp();
+const DB = wx.cloud.database();
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"
 import {
     store
 } from "../../share/index.js"
-const app = getApp()
-const DB = wx.cloud.database();
 Page({
     data: {
         head_img_url: "",
@@ -15,7 +15,7 @@ Page({
         isPushArticle: false,
         isMerchant: false,
         isLogin: false,
-        typess: ''
+        isHide: false
     },
     golike() {
         wx.navigateTo({
@@ -50,7 +50,7 @@ Page({
     getUserProfile() {
         if (this.data.user.userId == "") {
             var openid = app.globalData.openid;
-            DB.collection("useres").where({
+            DB.collection("users").where({
                 _openid: openid
             }).get({
                 success: (res) => {
@@ -68,7 +68,7 @@ Page({
                                                 head_img_url: ress.userInfo.avatarUrl,
                                                 nickname: ress.userInfo.nickName
                                             });
-                                            DB.collection("useres").add({
+                                            DB.collection("users").add({
                                                 data: {
                                                     userimg: ress.userInfo.avatarUrl,
                                                     username: ress.userInfo.nickName,
@@ -172,25 +172,6 @@ Page({
             })
         }
     },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
-    },
     isMerchant(openid) {
         DB.collection("merchantSettlement").where({
             _openid: openid,
@@ -204,6 +185,20 @@ Page({
                 }
             }
         })
+    },
+    changeMode() {
+        const that = this;
+        DB.collection("state").where({
+            isHide: true
+        }).get({
+            success: (res) => {
+                if (res.data.length == 1) {
+                    that.setData({
+                        'isHide': true
+                    })
+                }
+            }
+        });
     },
     onLoad() {
         this.storeBindings = createStoreBindings(this, {
@@ -268,11 +263,6 @@ Page({
 
     },
     onShow: function () {
-        if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-            this.getTabBar().setData({
-                selected: 3
-            })
-        }
     },
     onHide() {
 

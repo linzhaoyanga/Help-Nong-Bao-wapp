@@ -1,26 +1,28 @@
-page{
-  background-color: #f5f8fd;
+page {
+    background-color: #f5f8fd;
 }
 
-.box{
-  margin: 20rpx;
-  padding: 20rpx;
-  border-radius: 8rpx;
-  background-color: white;
+.box {
+    height: 1000rpx;
+    margin: 20rpx;
+    border-radius: 8rpx;
+    background-color: transparent;
+    background: url("https://7961-yanghi-ncd-2gvxlf65617dec81-1312061176.tcb.qcloud.la/other/background.png?sign=639d9a893ac1dc3d90dbf96ab48e265e&t=1672199997") no-repeat center;
 }
 
-.box .title{
-  text-align: center;
-  color: #000;
-  font-weight: bold;
-  font-size: 36rpx;
-  margin-bottom: 100rpx;
+.box .title {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 36rpx;
+    margin-bottom: 100rpx;
 }
 
-.box .p{
-  height: 300rpx;
-  line-height: 80rpx;
-  font-size: 28rpx;
-  text-indent: 1em;
-  margin-bottom: 200rpx;
+.box .p {
+    width: 500rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    text-indent: 1em;
+    margin-left: 120rpx;
+    margin-top: 160rpx;
 }

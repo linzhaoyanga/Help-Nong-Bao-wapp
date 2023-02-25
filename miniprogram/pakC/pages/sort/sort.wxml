@@ -1,9 +1,9 @@
-<view wx:if="{{typess == 1}}">
+<view wx:if="{{!isHide}}">
     <view wx:for="{{tabList}}" bindtap="goClassfiy" data-index="{{index}}" wx:key="index" class="card" wx:if="{{index != tabList.length-1}}">
         <image src="{{item.img}}" mode="aspectFill"></image>
         <view>{{item.text}}</view>
     </view>
 </view>
 
-<view wx:if="{{typess == 2}}" class="kkkkkk">
+<view wx:else class="kkkkkk">
     此页面正在开发中</view>

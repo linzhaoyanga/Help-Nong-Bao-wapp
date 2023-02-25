@@ -1,4 +1,4 @@
-<view wx:if="{{typess == 1}}">
+<view wx:if="{{!isHide}}">
 
 <view class="box">
   <view class="a">
@@ -36,7 +36,7 @@
   <textarea class="detail-address" model:value="{{detailAddress}}" name="detailAddress" cols="30" rows="10" placeholder="请输入企事业单位详细地址" placeholder-class="p-style"></textarea>
   <view class="a">
     <view>企业简介</view>
-    <textarea class="enterprise-synopsis" model:value="{{enterpriseSynopsis}}" name="detailAddress" cols="30" rows="10" placeholder="请输入企业简介" placeholder-class="p-style"></textarea>
+    <textarea class="enterprise-synopsis" model:value="{{enterpriseSynopsis}}" name="enterpriseSynopsis" cols="30" rows="10" placeholder="请输入企业简介" placeholder-class="p-style"></textarea>
   </view>
   <view class="upload-license">
     <view class="text">上传营业执照</view>
@@ -55,6 +55,6 @@
   <view class="btn" bindtap="submit">提交</view>
 </view>
 </view>
-<view wx:if="{{typess == 2}}" class="kkkkkk">
+<view wx:else class="kkkkkk">
 此页面正在开发中</view>
 

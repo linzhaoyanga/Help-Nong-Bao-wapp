@@ -89,7 +89,7 @@ page {
     width: 80rpx;
     height: 80rpx;
     border-radius: 50%;
-    border: 4rpx solid #e5e5e5;
+    border: 2rpx solid #e5e5e5;
 }
 
 .top .tab .text {

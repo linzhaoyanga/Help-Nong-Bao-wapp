@@ -46,7 +46,7 @@ Page({
             username: '',
             state: 2,
         },
-        typess:""
+        isHide: app.globalData.isHide
     },
 
     onLoad() {
@@ -54,26 +54,6 @@ Page({
             'articleObj.userId':app.globalData.userId,
             'articleObj.username':app.globalData.username
         });
-        this.changeMode();
-    },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
     },
     formSubmit(e) {
         const that = this;
@@ -121,6 +101,7 @@ Page({
                 DB.collection("article").add({
                     data: that.data.articleObj,
                     success(res) {
+                      console.log(res);
                         wx.showModal({
                             title: '发布成功',
                             content: '文章待审核，请稍等',
@@ -163,9 +144,12 @@ Page({
         }).exec()
     },
 
+    //后退
     undo() {
         this.editorCtx.undo()
     },
+
+    //前进
     redo() {
         this.editorCtx.redo()
     },
@@ -177,6 +161,7 @@ Page({
         if (!name) return
         this.editorCtx.format(name, value)
     },
+
     onStatusChange(e) {
         const formats = e.detail
         this.setData({
@@ -190,6 +175,7 @@ Page({
             }
         })
     },
+    //删除 清空
     clear() {
         this.editorCtx.clear({
             success: function (res) {
@@ -208,6 +194,7 @@ Page({
             text: formatDate
         })
     },
+    //插入图片
     insertImage() {
         const that = this
         wx.chooseImage({

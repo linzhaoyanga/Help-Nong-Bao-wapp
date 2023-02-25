@@ -1,6 +1,5 @@
-<import src="../common/head.wxml" />
-<import src="../common/foot.wxml" />
-<form bindsubmit="formSubmit" wx:if="{{typess == 1}}">
+<view wx:if="{{!isHide}}">
+  <!-- 文章类型 -->
   <view>
     <picker bindchange="bindPickerChange" model:value="{{index}}" range="{{array}}">
       <view class="picker">
@@ -8,12 +7,15 @@
       </view>
     </picker>
   </view>
+  <!-- 文章标题 -->
   <view>
     <input name="title" class="title" placeholder="请输入文章标题" maxlength="18" model:value="{{title}}"></input>
   </view>
+  <!-- 编辑区 -->
   <view class="container">
     <view class="page-body">
       <view class='wrapper'>
+        <!-- 操作栏 -->
         <view class='toolbar' bindtap="format">
           <i class="iconfont icon-zitijiacu {{formats.bold ? 'ql-active' : ''}}" data-name="bold"></i>
           <i class="iconfont icon-zitixieti {{formats.italic ? 'ql-active' : ''}}" data-name="italic"></i>
@@ -25,16 +27,14 @@
           <i class="iconfont icon-redo" bindtap="redo"></i> 
           <i class="iconfont icon-charutupian" bindtap="insertImage"></i>
           <i class="iconfont icon-shanchu" bindtap="clear"></i>
-
         </view>
-
-        <editor id="editor" class="ql-container" placeholder="{{placeholder}}"  showImgSize showImgToolbar showImgResize bindstatuschange="onStatusChange" read-only="{{readOnly}}" bindready="onEditorReady">
-        </editor>
-        <button class="button" type="primary" formType="submit">发布</button>
+        <!-- 文章内容区，富文本编辑器 -->
+        <editor id="editor" class="ql-container" placeholder="{{placeholder}}"  showImgSize showImgToolbar showImgResize  bindstatuschange="onStatusChange" read-only="{{readOnly}}" bindready="onEditorReady"></editor>
+        <!-- 发布按钮 -->
+        <view class="button" bindtap="formSubmit">发布</view>
       </view>
     </view>
-    <template is="foot" />
   </view>
-</form>
-<view wx:if="{{typess == 2}}" class="kkkkkk">
+</view>
+<view wx:else class="kkkkkk">
 此页面正在开发中</view>

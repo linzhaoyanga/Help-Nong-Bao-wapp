@@ -66,7 +66,7 @@
         </view>
     </view>
     <!-- 发言 -->
-    <view class="speak" wx:if="{{flog == 0 && typess == 1}}">
+    <view class="speak" wx:if="{{flog == 0 && !isHide}}">
         <input class="input" type="text" name="commentContext" placeholder="说点什么吧......" model:value="{{commentContext}}" />
         <view class="send" bindtap="sendMessage">发表</view>
     </view>

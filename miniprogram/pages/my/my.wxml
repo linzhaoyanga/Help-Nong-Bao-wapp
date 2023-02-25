@@ -1,4 +1,4 @@
-<view class="box" >
+<view class="box">
     <view class="back"></view>
     <!-- 头像部分 -->
     <view class="view">
@@ -6,7 +6,7 @@
         <text class="cl" bindtap="getUserProfile">{{nickname?nickname:'点击登录'}}</text>
     </view>
     <!-- 收藏消息部分 -->
-    <view class="xiaoxi" >
+    <view class="xiaoxi">
         <view class="vitem" bindtap="b">
             <image src="/images/fb.png"></image>
             <view>发布</view>
@@ -28,10 +28,10 @@
         <image class="fz" mode="widthFix" src="../../images/my-tab-business.png"></image>
     </view>
     <!-- 商家 -->
-    <view wx:if="{{isMerchant && typess == 1}}" >
+    <view wx:if="{{isMerchant && !isHide}}">
         <view class="xiaoxi">
             <view class="line" class="cll"> 商家</view>
-            <view class="line" bindtap="publish" >
+            <view class="line" bindtap="publish">
                 <image src="/images/tab-pub-good.png"></image>发布商品
             </view>
             <view class="line" bindtap="productOrder">
@@ -45,10 +45,10 @@
     <!-- 实用工具 -->
     <view class="xiaoxi">
         <view class="line" class="cll"> 实用工具</view>
-        <view class="line" bindtap="address" wx:if="{{isLogin  && typess == 1}}">
+        <view class="line" bindtap="address" wx:if="{{isLogin  && !isHide}}">
             <image src="/images/tab-address.png"></image>收货地址
         </view>
-        <view class="line" bindtap="article" wx:if="{{isPushArticle && typess == 1}}">
+        <view class="line" bindtap="article" wx:if="{{isPushArticle && !isHide}}">
             <image src="/images/tab-pub-good.png"></image>发布文章
         </view>
         <view class="line" bindtap="regard">

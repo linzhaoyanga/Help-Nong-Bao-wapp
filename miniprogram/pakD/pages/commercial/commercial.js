@@ -1,6 +1,6 @@
 // pages/prosn/prosn.js
+const app = getApp();
 const DB = wx.cloud.database();
-const app = getApp()
 Page({
     data: {
         result: '',

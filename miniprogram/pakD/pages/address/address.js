@@ -1,6 +1,6 @@
 // pages/address/address.js
+const app = getApp();
 const DB = wx.cloud.database();
-const app = getApp()
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"

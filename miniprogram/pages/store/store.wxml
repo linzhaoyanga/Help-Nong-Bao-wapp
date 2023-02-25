@@ -1,4 +1,4 @@
-<view wx:if="{{typess == 1}}">
+<view wx:if="{{!isHide}}">
     <!-- 搜索 -->
     <view class="box">
         <view class="inpp" bindtap="goSearch">
@@ -39,7 +39,7 @@
         暂时没有商品哦
     </view>
 </view>
-<view wx:if="{{typess == 2}}">
+<view wx:else>
     <view class="button">
         <view class="xhz" wx:for="{{goods}}" wx:key="index">
             <image src="{{item.imgs[0]}}"  mode="aspectFill"></image>

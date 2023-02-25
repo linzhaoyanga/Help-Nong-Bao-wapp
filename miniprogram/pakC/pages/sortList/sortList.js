@@ -1,11 +1,12 @@
 // pakC/pages/sortList/sortList.js
+const app = getApp();
+const DB = wx.cloud.database();
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"
 import {
     store
 } from "../../../share/index"
-const DB = wx.cloud.database();
 Page({
     data: {
         type: '',
@@ -15,7 +16,7 @@ Page({
         pages: 0,
         isToast: false,
         flog: false,
-        typess:'',
+        isHide: app.globalData.isHide
     },
     gotolist(e) {
         var id = e.currentTarget.dataset.id;
@@ -29,7 +30,7 @@ Page({
                 'isLoading': true
             });
             var total = 0;
-            let res = await DB.collection('com').where({
+            let res = await DB.collection('goods').where({
                 state: 1,
                 goodType: this.data.type,
             }).count();
@@ -40,7 +41,7 @@ Page({
                 'pages': pages
             })
             let begin = (pageNum - 1) * num;
-            let ares = await DB.collection("com").where({
+            let ares = await DB.collection("goods").where({
                 state: 1,
                 goodType: this.data.type,
             }).limit(num).skip(begin).get();
@@ -103,7 +104,6 @@ Page({
             fields: ['num'],
             actions: ['updateNum', 'updateGoods']
         });
-        this.changeMode();
         this.setData({
             'type': Number(options.type)
         });
@@ -111,25 +111,6 @@ Page({
             title: options.text,
         })
         this.obtainGoodsPage();
-    },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -156,7 +137,6 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-        this.storeBindings.destoryStoreBindings();
     },
 
     /**

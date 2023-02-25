@@ -1,9 +1,10 @@
 // pakC/pages/sort/sort.js
+const app = getApp();
 const DB = wx.cloud.database();
 Page({
     data: {
         tabList: [],
-        typess:'',
+        isHide: app.globalData.isHide
     },
     async obtainStoreTabs() {
         let ares = await DB.collection("tab").where({
@@ -14,32 +15,12 @@ Page({
         })
     },
     onLoad(options) {
-        this.changeMode();
         this.obtainStoreTabs();
     },
     goClassfiy(e){
         wx.navigateTo({
             url: '../sortList/sortList?type='+e.currentTarget.dataset.index+'&text='+this.data.tabList[e.currentTarget.dataset.index].text,
           })
-    },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

@@ -1,5 +1,5 @@
 // pages/individual/individual.js
-const app = getApp()
+const app = getApp();
 const DB = wx.cloud.database();
 Page({
     data: {
@@ -14,7 +14,7 @@ Page({
         region: ['请选择省市区/县', '', ''],
         detailAddress: '',
         enterpriseSynopsis: '',
-        typess:''
+        isHide: app.globalData.isHide
     },
     //选择县区
     bindRegionChange: function (e) {
@@ -156,25 +156,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-this.changeMode();
-    },changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
     },
 
     /**

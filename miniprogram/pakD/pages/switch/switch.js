@@ -1,6 +1,6 @@
 // pages/gdgn/tkewm/tkewm.js
-const DB = wx.cloud.database();
 const app = getApp();
+const DB = wx.cloud.database();
 Page({
 
     data: {
@@ -37,7 +37,7 @@ Page({
         isLoading: false,
         state: 0,
         businessId: '',
-        typess: ""
+        isHide: app.globalData.isHide
     }, //选择县区
     bindRegionChange: function (e) {
         this.setData({
@@ -337,7 +337,7 @@ Page({
                 return
             }
         }
-        DB.collection("com").add({
+        DB.collection("goods").add({
             data: obj,
             success: (res) => {
                 wx.showModal({
@@ -378,26 +378,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.changeMode();
-    },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
     },
 
     /**

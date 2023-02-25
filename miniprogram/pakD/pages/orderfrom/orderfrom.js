@@ -1,5 +1,5 @@
+const app = getApp();
 const DB = wx.cloud.database();
-const app = getApp()
 Page({
     data: {
         aa: 0,

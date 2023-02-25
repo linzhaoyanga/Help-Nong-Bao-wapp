@@ -1,4 +1,4 @@
-const app = getApp()
+const app = getApp();
 const DB = wx.cloud.database();
 Page({
     data: {

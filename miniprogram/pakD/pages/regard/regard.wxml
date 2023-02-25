@@ -3,7 +3,6 @@
   <image class="bg" src="/images/women.png"></image>
 </view> -->
 <view class="box">
-  <view class="title">关于我们</view>
   <view class="p">尊敬的各位用户，欢迎体验农产道小程序。农产道是由学生组成的小团队开发而成，开发此应用旨在打造一款在线学习，以农业实用技术培训为重点，多渠道，多层次，多形式地开展和促进农民增收，农业增效，提高广大农民群众生活质量的一款小程序。
   </view>
 </view>

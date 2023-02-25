@@ -97,6 +97,7 @@
     padding-left: 20rpx;
     display: flex;
     justify-content: space-between;
+    margin-top: 20rpx;
 }
 
 .article-view .top .user{
@@ -107,7 +108,7 @@
 .article-view .top .user image{
     width: 60rpx;
     height: 60rpx;
-    margin-right: 15rpx;
+    margin-right: 16rpx;
     border-radius: 50%;
 }
 

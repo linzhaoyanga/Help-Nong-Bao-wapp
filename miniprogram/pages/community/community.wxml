@@ -1,4 +1,4 @@
-<view wx:if="{{typess == 1}}">
+<view wx:if="{{!isHide}}">
     <wxs src="../../utils/filter/format.wxs" module="tool" />
     <view class="container">
         <view class="ranking-list">
@@ -62,7 +62,7 @@
         </view>
     </view>
 </view>
-<view wx:if="{{typess == 2}}">
+<view wx:else>
     <view class="article-view" wx:for="{{posts}}" wx:key="index">
         <view class="middle" >
             <view class="context">{{item.context}}</view>

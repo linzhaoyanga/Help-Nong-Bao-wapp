@@ -10,7 +10,7 @@
         </view>
         <view class="middle" wx:for="{{item.goods}}" wx:for-item="good" wx:for-index="i" wx:key="{{i}}">
             <view class="left">
-                <image src="{{good.img}}" mode="aspectFill"></image>
+                <image src="{{good.img}}" mode="aspectFill" ></image>
             </view>
             <view class="right">
                 <view class="title">{{good.title}}</view>

@@ -1,6 +1,6 @@
 // pakA/pages/collect/collect.js
 //创建数据库连接
-const app = getApp()
+const app = getApp();
 const DB = wx.cloud.database();
 Page({
 

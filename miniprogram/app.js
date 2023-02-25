@@ -1,15 +1,14 @@
-import dayjs from '/utils/dayjs.min.js'
 wx.cloud.init({
-    env: 'env-8g3zj4v40ddceade',
-    traceUser: true,
+    env: 'jiajia123-7gzqvr8i9155e1b8'
 });
+const DB = wx.cloud.database();
+import dayjs from '/utils/dayjs.min.js'
 import {
     createStoreBindings
 } from "mobx-miniprogram-bindings"
 import {
     store
 } from "./share/index"
-const DB = wx.cloud.database();
 App({
     globalData: {
         username: '',
@@ -18,10 +17,11 @@ App({
         userId: '',
         flog: false,
         isMerchant: false,
-        typess: ''
+        isHide: false
     },
     onLaunch: function () {
-        let that = this;
+        this.changeMode();
+        const that = this;
         this.storeBindings = createStoreBindings(this, {
             store,
             actions: ['updateUser']
@@ -30,7 +30,6 @@ App({
             name: 'gitOpenId',
             complete: res => {
                 that.globalData.openid = res.result.openid;
-                that.changeMode();
                 that.aaaa();
                 that.getuser();
             }
@@ -49,16 +48,13 @@ App({
         })
     },
     changeMode() {
-        let that = this;
+        const that = this;
         DB.collection("state").where({
-            json: 1
+            isHide: true
         }).get({
             success: (res) => {
                 if (res.data.length == 1) {
-                    that.globalData.typess = 1;
-                }
-                if (res.data.length == 2) {
-                    that.globalData.typess = 2;
+                    that.globalData.isHide = true;
                 }
             }
         })
@@ -66,7 +62,7 @@ App({
     getuser() {
         let that = this;
         let openid = this.globalData.openid;
-        DB.collection("useres").where({
+        DB.collection("users").where({
             _openid: openid
         }).get({
             success: (res) => {
@@ -83,7 +79,7 @@ App({
                                         this.globalData.userimg = res.userInfo.avatarUrl;
                                         this.globalData.openid = openid;
                                         this.globalData.flog = false
-                                        DB.collection("useres").add({
+                                        DB.collection("users").add({
                                             data: {
                                                 userimg: res.userInfo.avatarUrl,
                                                 username: res.userInfo.nickName,

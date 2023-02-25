@@ -1,5 +1,5 @@
 // pages/individual/individual.js
-const app = getApp()
+const app = getApp();
 const DB = wx.cloud.database();
 import {
     createStoreBindings
@@ -18,7 +18,7 @@ Page({
         flog: false,
         k: false,
         addressId: '',
-        typess: ""
+        isHide: app.globalData.isHide
     },
     //选择县区
     bindRegionChange: function (e) {
@@ -131,7 +131,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.changeMode();
         this.pdAddress();
         this.storeBindings = createStoreBindings(this, {
             store,
@@ -145,25 +144,7 @@ Page({
             this.obtainAddressById(options.id);
         }
     },
-    changeMode() {
-        let that = this;
-        DB.collection("state").where({
-            json: 1
-        }).get({
-            success: (res) => {
-                if (res.data.length == 1) {
-                    this.setData({
-                        'typess': 1
-                    })
-                }
-                if (res.data.length == 2) {
-                    this.setData({
-                        'typess': 2
-                    })
-                }
-            }
-        })
-    },
+    
     async saveUpdateAddress() {
         let that = this;
         if (this.data.username == '' ||

@@ -1,4 +1,4 @@
-<view wx:if="{{typess == 1}}">
+<view wx:if="{{!isHide}}">
     <view class="box">
         <view class="a">
             <view> 店铺名称</view>
@@ -49,5 +49,5 @@
         <view class="btn" bindtap="submit">提交</view>
     </view>
 </view>
-<view wx:if="{{typess == 2}}" class="kkkkkk">
+<view wx:else class="kkkkkk">
 此页面正在开发中</view>

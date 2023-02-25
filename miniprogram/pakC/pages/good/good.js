@@ -43,7 +43,7 @@ Page({
     async obtainGoodInfo() {
         const {
             data: res
-        } = await DB.collection("com").where({
+        } = await DB.collection("goods").where({
             _id: this.data.goodId
         }).get();
         this.setData({
@@ -105,7 +105,7 @@ Page({
         if (this.data.user.userId != "") {
             const {
                 data: res
-            } = await DB.collection("com").field({
+            } = await DB.collection("goods").field({
                 'num': true
             }).where({
                 _id: this.data.goodId
