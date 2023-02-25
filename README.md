@@ -73,7 +73,7 @@
 ###  我的模块
 
 <div style="display:flex;">
-    <img src="./data/readme/s27.png" style="zoom:50%;" />
+    <img src="./data/readme/s27.png" style="width:25%" />
 </div>
 
 #  本地运行
@@ -152,7 +152,7 @@ git clone https://github.com/yangyixiang-cc/Help-Nong-Bao-wapp.git
 
 选择右侧的导入模型：
 
-![image-20230225142513926](E:\study-notes-master\img\image-20230225142513926.png)
+![image-20230225142513926](./data/readme/image-20230225142513926.png)
 
 * 导入项目根目录下 `data/json/`下的 `schema-export-5ues1pu8.json` 文件即可
 
