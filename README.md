@@ -45,9 +45,9 @@
 ###  首页模块
 
 <div style="display: flex;">
-    <img src="./data/readme/s9.png" style="width:33%;" />
-    <img src="./data/readme/s10.png" style="width:33%;" />
-    <img src="./data/readme/s13.png" style="width:33%;" /> 
+    <img src="./data/readme/s9.png" style="width:30%;" />
+    <img src="./data/readme/s10.png" style="width:30%;" />
+    <img src="./data/readme/s13.png" style="width:30%;" /> 
 </div>
 
 
@@ -55,19 +55,19 @@
 ###  农友圈模块
 
 <div style="display:flex;">
-    <img src="./data/readme/s14.png" style="width:25%;" />
-    <img src="./data/readme/s15.png" style="width:25%;" />
-    <img src="./data/readme/s16.png" style="width:25%;" />
-    <img src="./data/readme/s17.png" style="width:25%;" />
+    <img src="./data/readme/s14.png" style="width:20%;" />
+    <img src="./data/readme/s15.png" style="width:20%;" />
+    <img src="./data/readme/s16.png" style="width:20%;" />
+    <img src="./data/readme/s17.png" style="width:20%;" />
 </div>
 
 ### 农资超市模块
 
 <div style="display:flex;">
-    <img src="./data/readme/s18.png" style="width:25%;" />
-    <img src="./data/readme/s23.png" style="width:25%;" />
-    <img src="./data/readme/s24.png" style="width:25%;" />
-    <img src="./data/readme/s26.png" style="width:25%;" />
+    <img src="./data/readme/s18.png" style="width:20%;" />
+    <img src="./data/readme/s23.png" style="width:20%;" />
+    <img src="./data/readme/s24.png" style="width:20%;" />
+    <img src="./data/readme/s26.png" style="width:20%;" />
 </div>
 
 ###  我的模块
