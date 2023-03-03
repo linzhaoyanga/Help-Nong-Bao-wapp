@@ -45,10 +45,11 @@
 ###  首页模块
 
 <div style="display: flex;">
-    <img src="./data/readme/s9.png" style="width:30%;" />
-    <img src="./data/readme/s10.png" style="width:30%;" />
-    <img src="./data/readme/s13.png" style="width:30%;" /> 
+    <img src="./data/readme/s9.png" style="width:20%;" />
+    <img src="./data/readme/s10.png" style="width:20%;" />
+    <img src="./data/readme/s13.png" style="width:20%;" /> 
 </div>
+
 
 
 
@@ -73,8 +74,9 @@
 ###  我的模块
 
 <div style="display:flex;">
-    <img src="./data/readme/s27.png" style="width:25%" />
+    <img src="./data/readme/s27.png" style="width:20%" />
 </div>
+
 
 #  本地运行
 
@@ -168,4 +170,4 @@ git clone https://github.com/yangyixiang-cc/Help-Nong-Bao-wapp.git
 
 #  反馈
 
-如果您有任何反馈，请通过发送至[电子邮件](mailto:workyyx@163.com)与我联系。
+如果您有任何反馈，请通过发送至[电子邮件](mailto:workyyx@163.com)与我联系/或者提交`issues` 。
